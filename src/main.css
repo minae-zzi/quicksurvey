@@ -1,0 +1,91 @@
+.visual_slide_v01 { overflow-x:hidden; background:url('../public/images/visual_01.png'); background-repeat: no-repeat; background-size:cover;}
+.visual_slide_v02 {overflow-x:hidden;background:url('../public/images/visual_02.png'); background-repeat: no-repeat; background-size:cover;}
+
+
+.about-section {
+    background:url('../public/images/about_img.png') center 20% no-repeat
+
+}
+
+.bubble1 {
+    background:url('../public/images/bubble1.png') left top no-repeat;
+    background-size:100%;
+  }
+
+ .bubble2 {
+    background:url('../public/images/bubble2.png') left top no-repeat;
+    background-size:100%;
+  }
+ 
+
+  .service-img {
+    background:url('../public/images/dep1_img.png') left top;
+    background-size:cover;
+  }
+
+  .service-tbg {
+    background:url('../public/images/b_arrow.png') right top;
+    background-repeat: no-repeat;
+  }
+
+  .service-section {
+    background:url('../public/images/service_bg.png') center top;
+    background-size:cover;
+  }
+
+  .sample-section {
+    background:url('../public/images/dep4_img.png') right 5%;
+    background-repeat: no-repeat;
+  }
+
+  .bb {border:1px solid #000;}
+
+  .stepico_1 {
+    background:url('../public/images/step_ico1.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:48px; height:48px;
+    display: block;
+    margin:0 auto 0.6rem auto;
+
+  }
+
+  .stepico_2 {
+    background:url('../public/images/step_ico2.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:48px; height:48px;
+    display: block;
+    margin:0 auto 0.6rem auto;
+
+  }
+
+  .stepico_3 {
+    background:url('../public/images/step_ico3.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:48px; height:48px;
+    display: block;
+    margin:0 auto 0.6rem auto;
+
+  }
+
+  .stepico_4 {
+    background:url('../public/images/step_ico4.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:48px; height:48px;
+    display: block;
+    margin:0 auto 0.6rem auto;
+
+  }
+
+  .stepico_5 {
+    background:url('../public/images/step_ico5.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:48px; height:48px;
+    display: block;
+    margin:0 auto 0.6rem auto;
+
+  }
