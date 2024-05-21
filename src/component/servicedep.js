@@ -5,7 +5,7 @@ export default function Servicedep() {
   
 
     return (
-        <div className='absolute left-5 top-1/2'>
+        <div className='absolute left-5 top-1/2 hidden lg:block'>
               <ul>
                 <li>서비스 특장점</li>
                 <li>진행절차</li>

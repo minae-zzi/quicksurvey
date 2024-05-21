@@ -3,7 +3,8 @@
 
 
 .about-section {
-    background:url('../public/images/about_img.png') center 20% no-repeat
+    background:url('../public/images/about_img.png') center 15% no-repeat;
+    background-size:contain;
 
 }
 
@@ -88,4 +89,14 @@
     display: block;
     margin:0 auto 0.6rem auto;
 
+  }
+
+  .sectionStep {
+    background:url('../public/images/step_bg.png') center top;
+    background-size:cover;
+  }
+
+  .sectionQna {
+    background:url('../public/images/fail_bg.png') center top;
+    background-size:cover;
   }

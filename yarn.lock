@@ -1721,6 +1721,11 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.10.2.tgz"
   integrity sha512-hw437iINopmQuxWPSUEvqE56NCPsiU8N4AYtfHmJFckclktzK9YQJieD3XkDCDH4OjL+C7zgPUh73R/nrcHrqw==
 
+"@shinyongjun/react-fullpage@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.npmjs.org/@shinyongjun/react-fullpage/-/react-fullpage-1.10.0.tgz"
+  integrity sha512-++jraTkbDZ+3w2q+cOlWz+K0iZ+OyITocsQ1jLy3fBnmk3+NXjv/psrsrzpcmPLbGFAbpqn4u0pC3k12qhPMeA==
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.51.tgz"
@@ -2608,6 +2613,11 @@ ajv@^8.8.2, ajv@^8.9.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
     uri-js "^4.4.1"
+
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/animate.css/-/animate.css-4.1.1.tgz"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
 
 ansi-escapes@^4.2.1, ansi-escapes@^4.3.1:
   version "4.3.2"
@@ -5145,6 +5155,11 @@ graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/graphemer/-/graphemer-1.4.0.tgz"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
+
+gsap@^3.12.5:
+  version "3.12.5"
+  resolved "https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz"
+  integrity sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==
 
 gzip-size@^6.0.0:
   version "6.0.0"
@@ -8503,6 +8518,11 @@ schema-utils@2.7.0:
     ajv "^6.12.2"
     ajv-keywords "^3.4.1"
 
+scrollmagic@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.npmjs.org/scrollmagic/-/scrollmagic-2.0.8.tgz"
+  integrity sha512-UYXEGBPVLziovXl3FjHGkY9c4UXKUKopIdXwWR2JapWxCo0U345wYegi7rcsv5vHf/ktc1bSNWy4QRFiV+Yccw==
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/select-hose/-/select-hose-2.0.0.tgz"
@@ -9998,6 +10018,11 @@ workbox-window@6.6.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
     workbox-core "6.6.0"
+
+wow.js@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/wow.js/-/wow.js-1.2.2.tgz"
+  integrity sha512-YTW9eiZimHCJDWofsiz2507txaPteUiQD461I/D8533AiRAn3+Y68/1LDuQ3OTgPjagGZLPYKrpoSgjzeQrO6A==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
   version "7.0.0"

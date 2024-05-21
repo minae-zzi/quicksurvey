@@ -3,7 +3,7 @@ export default function Navigator() {
 
 
     return (
-        <header className="absolute z-20 w-full">
+        <header className="absolute top-0 z-20 w-full">
             <div className="flex justify-between items-center p-8">
                 <h1><img src={`../images/logo_w.png`} alt="quicksurvey" /></h1>
                 <ul className="flex gap-5">

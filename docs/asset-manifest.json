@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.953bc5b0.css",
+    "main.js": "/static/js/main.78388c8c.js",
+    "static/js/453.b0989f42.chunk.js": "/static/js/453.b0989f42.chunk.js",
+    "static/media/visual.mp4": "/static/media/visual.616babd6b966aac200cd.mp4",
+    "static/media/fail_bg.png": "/static/media/fail_bg.4c4c931aee95d00af7cd.png",
+    "static/media/visual_02.png": "/static/media/visual_02.4feee86b1e86f4c53bb1.png",
+    "static/media/visual_01.png": "/static/media/visual_01.bed25d4d88d7fb134fe2.png",
+    "static/media/service_bg.png": "/static/media/service_bg.eabceec994136699ffc6.png",
+    "static/media/dep1_img.png": "/static/media/dep1_img.ea6fe8f2cba8d159ac94.png",
+    "static/media/about_img.png": "/static/media/about_img.c38ef4419b1b5384f3d6.png",
+    "static/media/step_bg.png": "/static/media/step_bg.e8c1c9d8ab6bb10ae3a3.png",
+    "static/media/dep4_img.png": "/static/media/dep4_img.2dc18d58af333417f063.png",
+    "static/media/step_ico5.svg": "/static/media/step_ico5.190083da3abb0f0c21f5.svg",
+    "static/media/step_ico4.svg": "/static/media/step_ico4.e7d26dc6b23201fcb084.svg",
+    "static/media/step_ico3.svg": "/static/media/step_ico3.833c68df106af832eb17.svg",
+    "static/media/step_ico1.svg": "/static/media/step_ico1.7c4028b5f55dfd4e57ef.svg",
+    "static/media/step_ico2.svg": "/static/media/step_ico2.ab1dfb7cec62fecd2b36.svg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.953bc5b0.css.map": "/static/css/main.953bc5b0.css.map",
+    "main.78388c8c.js.map": "/static/js/main.78388c8c.js.map",
+    "453.b0989f42.chunk.js.map": "/static/js/453.b0989f42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.953bc5b0.css",
+    "static/js/main.78388c8c.js"
+  ]
+}

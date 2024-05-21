@@ -16,7 +16,7 @@ export default function SectionStep() {
     };
 
     return (
-        <div className="relative flex justify-center items-start min-h-screen bg-gray-100">
+        <div className="relative flex justify-center items-start min-h-screen w-full sectionStep">
             <div className="flex flex-col items-center w-10/12 h-screen justify-center">
                 <h1 className="text-7xl font-bold text-center pb-12">
                     한국리서치 <span className='text-c1'>Quick Survey</span> 어떻게 진행되나요?
@@ -26,7 +26,7 @@ export default function SectionStep() {
                     {item.map((step, index) => (
                         <li
                             key={step.id}
-                            className={`relative rounded-full flex flex-col justify-center text-center text-white font-bold w-44 h-44 ${hoverIndex === index ? 'bg-c1 w-48 h-48' : 'bg-gray-400'} shadow-lg transition duration-300`}
+                            className={`relative rounded-full flex flex-col justify-center text-center text-white font-bold w-44 h-44 ${hoverIndex === index ? 'bg-c1 w-48 h-48' : 'bg-neutral-400'} shadow-lg transition duration-300`}
                             onMouseEnter={() => handleMouseEnter(index)} // 마우스가 요소에 진입할 때 호출되는 이벤트 핸들러
                             onMouseLeave={() => setHoverIndex(-1)} // 마우스가 요소를 떠날 때 hoverIndex를 초기화하여 hover 효과를 해제
                         >
