@@ -26,6 +26,7 @@ export default function SectionBottom() {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
+        pauseOnHover: false,
         cssEase: "linear" // 부드러운 애니메이션을 위해 설정
       };
 
@@ -40,6 +41,7 @@ export default function SectionBottom() {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
+        pauseOnHover: false,
         cssEase: "linear", // 부드러운 애니메이션을 위해 설정
         rtl: true // 슬라이더를 오른쪽에서 왼쪽으로 흐르게 함
       };
@@ -55,25 +57,27 @@ export default function SectionBottom() {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
+        pauseOnHover: false,
         cssEase: "linear" // 부드러운 애니메이션을 위해 설정
       };
 
 
       const totalImages = 31; // 총 이미지 수
-      const sliderImages = Array.from({ length: totalImages }, (_, index) => `/images/foot_logo${index + 1}.png`);
+      const sliderImages = Array.from({ length: totalImages }, (_, index) => `${process.env.PUBLIC_URL}/images/foot_logo${index + 1}.png`);
+
 
       
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen w-full">
-            <p className="text-7xl font-bold pb-12 text-center">학술 연구 설문조사 데이터 수집,<br />
+        <div className="flex flex-col justify-center items-center lg:min-h-screen w-full pt-14 pb-14 lg:p-0">
+            <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-7xl font-bold lg:pb-12 text-center">학술 연구 설문조사 데이터 수집,<br />
 한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
 
 
-                <ul className="pb-12">
+                <ul className="p-4 lg:p-0 pb-12">
                     {
                         checklist.map((i)=>{
                             return(
-                                <li className="flex justify-center items-center mb-3 bg-neutral-100 rounded-full font-bold text-xl p-2 pr-14 pl-14">
+                                <li className="flex justify-center items-center mb-3 bg-neutral-100 rounded-full font-bold text-base leading-tight lg:text-xl p-2 pr-14 pl-14">
                                     <i className="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                                 <g clip-path="url(#clip0_2018_2138)">
                                   <path d="M11.52 12.5996L9 15.1196L18 24.1196L36 6.11961L33.48 3.59961L18 19.0796L11.52 12.5996Z" fill="#CD3941"/>
@@ -122,11 +126,11 @@ export default function SectionBottom() {
                 </Slider>
     </div>
 
-                    <div className="font-bold text-xl pt-4 pb-2">수 많은 고객사들이 한국리서치 퀵서베이와 함께하고 있습니다</div>
-                    <div className="flex justify-center gap-4 pt-4">
-                        <button className="font-bold text-white text-xl rounded-full p-4 pr-14 pl-14 bg-c1 leading-tight">한국리서치 Quick Survey<br />
+                    <div className="font-bold text-xl pt-4 pb-2 text-center">수 많은 고객사들이 한국리서치 퀵서베이와 함께하고 있습니다</div>
+                    <div className="flex lg:flex-row flex-col justify-center gap-2 lg:gap-4 pt-4">
+                        <button className="font-bold text-white text-base lg:text-xl rounded-full p-4 pr-14 pl-14 bg-c1 leading-tight">한국리서치 Quick Survey<br />
 소개자료 다운로드(PDF)</button>
-                        <button className="font-bold text-white text-xl rounded-full p-4 pr-14 pl-14 bg-c3 leading-tight">한국리서치 패널<br />
+                        <button className="font-bold text-white text-base lg:text-xl rounded-full p-4 pr-14 pl-14 bg-c3 leading-tight">한국리서치 패널<br />
 소개자료 다운로드(PDF)</button>
                     </div>
         </div>

@@ -76,7 +76,7 @@ export default function SectionService04() {
            <li>· 소아청소년 학부모 백신 인식 조사</li>
            </ul>
        </div>
-       <div className='col-span-3 text-right italic -mt-5'>실제 진행한 조사 중 최신의 트렌드를 반영한 일부만 소개해 드립니다.</div>
+       <div className='col-span-3 text-right italic lg:-mt-5'>실제 진행한 조사 중 최신의 트렌드를 반영한 일부만 소개해 드립니다.</div>
 
      </div>
      </div>

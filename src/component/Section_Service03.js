@@ -16,9 +16,9 @@ export default function SectionService03() {
  <div className="lg:h-screen relative service-section w-full">
  <Servicedep />
    
-   <div className='flex flex-col justify-center items-center lg:h-screen p-4 pt-10 pb-10 lg:p-0'>
+   <div className='flex flex-col justify-center items-center lg:h-screen p-4 pt-14 pb-14 lg:p-0'>
        <div className='text-4xl font-bold pb-4 text-center text-white lg:text-7xl lg:pb-10 '>신뢰할 수 있는 데이터</div>
-       <p className='text-lg text-white pb-4 lg:pb-10 text-center'>정확하고 신뢰할 수 있는 데이터를 제공합니다.</p>
+       <p className='text-lg text-white pb-4 leading-tight lg:pb-10 text-center'>정확하고 신뢰할 수 있는 데이터를 제공합니다.</p>
 
        <div className='rounded-lg lg:rounded-full bg-white font-bold text-lg leading-tight lg:text-2xl p-4 z-10 lg:w-[935px] text-center'>전담 연구원이 <span className='text-c3'>직접 데이터를 점검하여 아래와 같은 데이터</span>는 전달하지 않습니다.</div>
        <div className='rounded-lg border-solid border border-white -mt-14 lg:w-[935px] p-4 pt-16 w-full'>

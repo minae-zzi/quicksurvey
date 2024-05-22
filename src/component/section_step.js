@@ -1,63 +1,75 @@
-import React, { useState } from "react";
+
+import Servicedep from "./servicedep";
 
 export default function SectionStep() {
-    const [hoverIndex, setHoverIndex] = useState(0); // 초기에 첫 번째 요소가 hover된 상태로 설정
-
-    const item = [
-        { id : '01', title : '사전 논의',iclass : 'stepico_1' },
-        { id : '02', title : '작성된 설문지 검토',iclass : 'stepico_2' },
-        { id : '03', title : '온라인 설문 제작',iclass : 'stepico_3'},
-        { id : '04', title : '온라인 조사 수행',iclass : 'stepico_4'},
-        { id : '05', title : '최종 데이터 전달',iclass : 'stepico_5'},
-    ];
-
-    const handleMouseEnter = (index) => {
-        setHoverIndex(index); // 마우스가 요소에 진입하면 해당 요소의 인덱스를 설정하여 hoverIndex를 업데이트
-    };
 
     return (
-        <div className="relative flex justify-center items-start min-h-screen w-full sectionStep">
-            <div className="flex flex-col items-center w-10/12 h-screen justify-center">
-                <h1 className="text-7xl font-bold text-center pb-12">
-                    한국리서치 <span className='text-c1'>Quick Survey</span> 어떻게 진행되나요?
-                </h1>
-                
-                <ul className='flex gap-14 justify-center items-center text-lg w-full'>
-                    {item.map((step, index) => (
-                        <li
-                            key={step.id}
-                            className={`relative rounded-full flex flex-col justify-center text-center text-white font-bold w-44 h-44 ${hoverIndex === index ? 'bg-c1 w-48 h-48' : 'bg-neutral-400'} shadow-lg transition duration-300`}
-                            onMouseEnter={() => handleMouseEnter(index)} // 마우스가 요소에 진입할 때 호출되는 이벤트 핸들러
-                            onMouseLeave={() => setHoverIndex(-1)} // 마우스가 요소를 떠날 때 hoverIndex를 초기화하여 hover 효과를 해제
-                        >
-                            <i className={step.iclass}></i> {step.title} 
-                            {index !== item.length - 1 && (
-                                <span className="absolute -right-11">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="12" viewBox="0 0 46 12" fill="none">
-                                        <path d="M45.7735 6L40 0.226497L34.2265 6L40 11.7735L45.7735 6ZM0 7H40V5H0V7Z" fill={hoverIndex === index ? "#CA2C34" : "#A6A6A6"} />
-                                    </svg>
-                                </span>
-                            )}
-                        </li>
-                    ))}
-                </ul>
+        <div className="relative sectionStep flex flex-col justify-center lg:flex-row lg:justify-between lg:items-center lg:pl-80 lg:pr-[15%] lg:h-screen p-4 pt-14 pb-14">
+            <Servicedep />
+            <div className="flex flex-col items-center lg:items-start">
+                <p className="font-bold text-4xl text-center lg:text-left lg:text-7xl">한국리서치<br/>
+                <span className="text-c1">Quick Survey</span><br/>
+                어떻게 진행되나요?</p>
+                <button className="bg-zinc-800 text-white text-xl p-4 pl-14 pr-14 rounded-full lg:mt-12 mt-4">온라인 조사 화면 체험하기</button>
+                <p className="pt-4 pl-4 leading-tight lg:text-left text-center">학술 조사에서 많이 사용하는<br />
+문항 형태를 직접 체험해 보실 수 있습니다</p>
+            </div>
+            <div className="flex flex-col gap-8 pt-14 w-full lg:pt-0 lg:w-10/12 ">
 
-                <div className="relative flex w-10/12 pl-14 pr-14 pt-12 pb-8 rounded-full border-solid border-t-2 border-c1 shadow-lg bg-white mt-24">
-                    <ul className="absolute -top-6 left-0 flex gap-4 justify-between pl-24 pr-24 w-full">
-                        {item.map((step, index) => (
-                            <li key={index} className="rounded-xl bg-c1 pl-4 pr-4 pb-3 pt-3 text-center font-bold text-lg text-white">Step {step.id}</li>
-                        ))}
+
+                <div className="relative rounded-xl lg:rounded-full p-3 lg:p-6 shadow-lg border-t border-c1 text-lg  bg-white">
+                    <p className="absolute left-12 -top-4 rounded-full bg-c1 text-white p-3 pl-8 pr-8 font-bold text-sm lg:text-base">Step1. 사전 논의</p>
+                    
+                    <ul className="p-8 pb-0 lg:pt-6 lg:pl-14 text-base list-decimal">
+                        <li>견적 논의 및 확정</li>
+                        <li>*IRB심의 시 필요한 자료 전달 </li>
                     </ul>
-
-                    <div className='step01_cont flex'>
-                        <p className="text-c1 text-4xl font-bold pr-6">사전논의</p>
-                        <ul className="flex flex-col text-lg">
-                            <li>· 견적 논의 및 확정</li>
-                            <li>· *IRB심의 시 필요한 자료 전달</li>
-                            <li className="absolute right-14 bottom-8 text-c1">*IRB 심의가 조사 진행 시 필수는 아님</li>
-                        </ul>
-                    </div>
+                    <p className="relative bottom-0 -right-14 lg:absolute lg:right-12 lg:bottom-6 text-c1 text-base">*IRB 심의가 조사 진행 시 필수는 아님</p>
                 </div>
+
+                <div className="relative rounded-xl lg:rounded-full p-3 lg:p-6 shadow-lg border-t border-c1 text-lg bg-white">
+                    <p className="absolute left-12 -top-4 rounded-full bg-c1 text-white p-3 pl-8 pr-8 font-bold text-sm lg:text-base">Step2. 작성된 설문지 검토</p>
+                    <ul className="p-8 pb-4 lg:pt-6 lg:pl-14 text-base list-decimal">
+                        <li>한국리서치 연구원 배정</li>
+                        <li>설문지(hwp, word 등) 검토</li>
+                        <li>최종 설문지 확정</li>
+
+                    </ul>
+                </div>
+
+                <div className="relative rounded-xl lg:rounded-full p-3 lg:p-6 shadow-lg border-t border-c1 text-lg bg-white">
+                    <p className="absolute left-12 -top-4 rounded-full bg-c1 text-white p-3 pl-8 pr-8 font-bold text-sm lg:text-base">Step3. 온라인 설문 제작</p>
+                    <ul className="p-8 pb-4 lg:pt-6 lg:pl-14 text-base list-decimal">
+                        <li>한국리서치 전담 개발팀에서 온라인 설문 제작</li>
+                        <li>전담 연구원이 1차로 온라인 설문 확인</li>
+                        <li>연구자가 2차로 온라인 설문 확인</li>
+                        <li>온라인 설문 확정</li>
+                    </ul>
+                </div>
+
+                <div className="relative rounded-xl lg:rounded-full p-3 lg:p-6 shadow-lg border-t border-c1 text-lg bg-white">
+                    <p className="absolute left-12 -top-4 rounded-full bg-c1 text-white p-3 pl-8 pr-8 font-bold text-sm lg:text-base">Step4. 온라인 조사 수행</p>
+                    <ul className="p-8 pb-4 lg:pt-6 lg:pl-14 text-base list-decimal">
+                        <li>한국리서치 전담 패널팀에서 조사 대상 샘플링</li>
+                        <li>적격 응답자들에게 설문 조사 수행 및 응답 독려</li>
+                        <li>응답자에게 사례금 제공</li>
+
+                    </ul>
+                </div>
+
+                <div className="relative rounded-xl lg:rounded-full p-3 lg:p-6 shadow-lg border-t border-c1 text-lg bg-white">
+                    <p className="absolute left-12 -top-4 rounded-full bg-c1 text-white p-3 pl-8 pr-8 font-bold text-sm lg:text-base">Step5. 최종데이터 전달</p>
+                    <ul className="p-8 pb-4 lg:pt-6 lg:pl-14 text-base list-decimal">
+                        <li>누락 및 불성실 응답값 제외</li>
+                        <li>전담 연구원의 응답 논리성 확인</li>
+                        <li>최종 Raw데이터(spss, excel) 전달</li>
+
+                    </ul>
+                </div>
+
+
+
+
             </div>
         </div>
     );

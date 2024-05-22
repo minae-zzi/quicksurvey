@@ -8,7 +8,7 @@ const researchlist = [
   
 
 // 첫 번째 컴포넌트
-export function SectionService02_List() {
+export function SectionService02List() {
     return (
         <div className='flex flex-row lg:flex-row justify-center items-center gap-2 text-lg w-full lg:w-1/2'>
 
@@ -74,7 +74,7 @@ export function SectionService02_List() {
 }
 
 // 두 번째 컴포넌트
-export function SectionService02_List_Mobile() {
+export function SectionService02ListMobile() {
     return (
         <div className='flex flex-col justify-center items-center'>
         
