@@ -96,31 +96,31 @@ export default function SectionAbout() {
     const whysurvey = [
       {
         id:'1',
-        title : '대표성 있는 국내 최대 규모 패널'
+        title : '대표성 있는\n국내 최대 규모 패널'
       },
       {
         id:'2',
-        title : '프로젝트 별 전담 연구원 배치'
+        title : '프로젝트 별\n전담 연구원 배치'
       },
       {
         id:'3',
-        title : '신뢰할 수 있는 데이터'
+        title : '신뢰할 수\n있는 데이터'
       },
       {
         id:'4',
-        title : '10년 이상 축적된 다양한 노하우'
+        title : '10년 이상 축적된\n다양한 노하우'
       },
     ]
     return (
 
 
-  <div ref={aRef} className="lg:h-screen relative w-full flex justify-center items-center">
+  <div ref={aRef} className="lg:h-screen relative w-full flex justify-center items-center p-4">
     <Navigator />
     <Servicedep />
   
       <div className='relative text-center'>
 
-        <div className="pb-8 pt-24 lg:pt-0"><img src="/images/about_img.png" alt="" /></div>
+        <div className="pb-8 pt-24 lg:pt-0"><img src={process.env.PUBLIC_URL + '/images/about_img.png'} alt="" /></div>
         <div className='inline-block'>
           <p className='inline-block text-3xl lg:text-7xl font-bold'>한국리서치에 의뢰하세요</p>
           <p style={{background:'#F8F0E7', height:'15px', width:'100%', margin:'-10px 0 0 0'}}></p>
@@ -135,7 +135,7 @@ export default function SectionAbout() {
                 return(
                   <div className='flex items-center justify-start p-2 pl-4 pr-4 m-1 bg-zinc-50 rounded-full lg:rounded-none lg:bg-transparent'>
                   <span className='font-bold text-3xl lg:text-8xl pr-4 text-gray-200'>{i.id}</span>
-                  <p className="text-base lg:text-3xl font-bold text-left">{i.title}</p>
+                  <p className="text-base lg:text-3xl font-bold text-left lg:whitespace-pre-line">{i.title}</p>
                 </div>
                 )
               })

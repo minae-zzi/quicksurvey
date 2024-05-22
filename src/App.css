@@ -13,3 +13,10 @@
 
 html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: 'Pretendard'; overflow-x:hidden; }
 * {font-family: 'Pretendard';}
+
+@media screen and (max-width: 768px) {
+  .brnone br {
+    display: none;
+  }
+}
+

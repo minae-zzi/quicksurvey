@@ -3,8 +3,8 @@ import visualVideo from '../videos/visual.mp4'; // MP4 파일 경로
 
 export default function Visual() {
     return (
-        <div className="relative w-full lg:h-screen h-96">
-            <div className="absolute lg:h-screen h-96 flex flex-col justify-center items-center w-full z-10 text-center">
+        <div className="relative h-96 lg:h-screen">
+            <div className="absolute lg:h-screen h-96 flex flex-col justify-center items-center w-full z-10 p-8 text-center">
                 <p className="font-bold text-white text-3xl lg:text-8xl">한국리서치 Quick Survey<br />
 학술 연구 설문조사의 최고 파트너</p>
 <p className="font-bold text-white text-sm pt-2 lg:text-2xl lg:pt-8">연구와 논문 작성에 몰입할 수 있게 데이터 수집은 전문가에게 맡기세요.<br />

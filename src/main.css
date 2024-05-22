@@ -34,11 +34,13 @@
     background-size:cover;
   }
 
-  .sample-section {
-    background:url('../public/images/dep4_img.png') right 5%;
-    background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    .sample-section {
+      background: url('../public/images/dep4_img.png') right 5%;
+      background-repeat: no-repeat;
+    }
   }
-
+  
   .bb {border:1px solid #000;}
 
   .stepico_1 {
