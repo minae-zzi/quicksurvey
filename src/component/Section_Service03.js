@@ -1,8 +1,37 @@
 
 import Servicedep from "./servicedep";
+import { useRef } from "react";
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function SectionService03() {
+export default function SectionService03(props) {
    
+  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
+
+  const container = useRef();
+  const tl = useRef();
+
+  useGSAP(()=>{
+    tl.current = gsap.timeline( {
+      scrollTrigger: {
+        trigger: ".triggerbox", // 범위를 지정하는 요소
+        start: "top center", // 애니메이션이 시작되는 스크롤 위치
+        end: `+=600`,
+        scrub:true
+      }
+    })
+    .from (".t0",{scale:0.5})
+    .from (".t1",{y:50, opacity:0, duration:1})
+    .from (".t2",{y:50, opacity:0, duration:1})
+    .from (".t3",{y:50, opacity:0, duration:1})
+    .from (".t4",{y:50, opacity:0, duration:1})
+    .from (".t5",{scale:0.1, opacity:0, duration:1})
+
+  },{scope: container});
+
+
   const datasort = [
     '설문에 끝까지 참여하지 않은 데이터',
     '일괄되게 동일한 응답을 한 데이터',
@@ -13,16 +42,17 @@ export default function SectionService03() {
   ]
     return (
 
- <div className="lg:h-screen relative service-section w-full">
- <Servicedep />
-   
-   <div className='flex flex-col justify-center items-center lg:h-screen p-4 pt-14 pb-14 lg:p-0'>
-       <div className='text-4xl font-bold pb-4 text-center text-white lg:text-7xl lg:pb-10 '>신뢰할 수 있는 데이터</div>
-       <p className='text-lg text-white pb-4 leading-tight lg:pb-10 text-center'>정확하고 신뢰할 수 있는 데이터를 제공합니다.</p>
+ <div className="relative service-section lg:h-screen w-full bb t0" ref={container}>
+  <div className="text-white">
+ <Servicedep dep="first"/>
+ </div>
+   <div className='flex flex-col justify-center items-center p-4 pt-14 pb-14 lg:p-0 lg:h-screen triggerbox'>
+       <div className='text-4xl font-bold pb-4 text-center text-white lg:text-7xl lg:pb-10 t1'>신뢰할 수 있는 데이터</div>
+       <p className='text-lg text-white pb-4 leading-tight lg:pb-10 text-center t2'>정확하고 신뢰할 수 있는 데이터를 제공합니다.</p>
 
-       <div className='rounded-lg lg:rounded-full bg-white font-bold text-lg leading-tight lg:text-2xl p-4 z-10 lg:w-[935px] text-center'>전담 연구원이 <span className='text-c3'>직접 데이터를 점검하여 아래와 같은 데이터</span>는 전달하지 않습니다.</div>
+       <div className='rounded-lg lg:rounded-full bg-white font-bold text-lg leading-tight lg:text-2xl p-4 z-10 lg:w-[935px] text-center t3'>전담 연구원이 <span className='text-c3'>직접 데이터를 점검하여 아래와 같은 데이터</span>는 전달하지 않습니다.</div>
        <div className='rounded-lg border-solid border border-white -mt-14 lg:w-[935px] p-4 pt-16 w-full'>
-         <ul className='grid grid-cols-1 gap-2 p-2 lg:grid-cols-2 lg:gap-4 lg:p-4'>
+         <ul className='grid grid-cols-1 gap-2 p-2 lg:grid-cols-2 lg:gap-4 lg:p-4 t4'>
           {
             datasort.map((i)=>{
               return(
@@ -37,9 +67,9 @@ export default function SectionService03() {
           </ul>
        </div>
        <p className="text-center"><img src="../images/ico_bottomarrow.png" alt="" /></p>
-       <p className="font-bold text-lg leading-tight lg:text-3xl text-center text-white pt-4 lg:pt-10">따라서 동일한 샘플 수라도 비표본 오차를 줄인 유효한 데이터를 받아보실 수 있습니다.</p>
+       <p className="font-bold text-lg leading-tight lg:text-3xl text-center text-white pt-4 lg:pt-10 t5">따라서 동일한 샘플 수라도 비표본 오차를 줄인 유효한 데이터를 받아보실 수 있습니다.</p>
    </div>
- </div>
+   </div>
  
     );
 }

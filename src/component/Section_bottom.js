@@ -1,9 +1,15 @@
 
 import React from "react";
 import Slider from "react-slick";
+import Servicedep from "./servicedep";
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
+import gsap from 'gsap';
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function SectionBottom() {
     
@@ -66,18 +72,49 @@ export default function SectionBottom() {
       const sliderImages = Array.from({ length: totalImages }, (_, index) => `${process.env.PUBLIC_URL}/images/foot_logo${index + 1}.png`);
 
 
+      gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(useGSAP);
+    
+      const container = useRef();
+      const tl = useRef();
+    
+    
+      useGSAP(()=>{
+        tl.current = gsap.timeline( {
+          scrollTrigger: {
+            trigger: ".triggerbox", 
+            start: "top center", 
+            end: `center center`,
+            scrub:true,
+
+          }
+        })
+        .from (".t0",{y:-100, opacity:0, duration:1})
+        .from (".t1",{ y:-100, opacity:0,  duration:1})
+        .from (".t2",{ y:-100, opacity:0,  duration:1})
+        .from (".t3",{y:-100, opacity:0, duration:1})
+        .from (".t4",{y:-100, opacity:0, duration:1})
+      
+    
+      },{scope: container});
+
+
+
       
     return (
-        <div className="flex flex-col justify-center items-center lg:min-h-screen w-full pt-14 pb-14 lg:p-0">
-            <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-7xl font-bold lg:pb-12 text-center">학술 연구 설문조사 데이터 수집,<br />
+        <div ref={container}>
+             
+        <div className="flex flex-col justify-center items-center lg:min-h-screen w-full pt-14 pb-14 lg:p-0 overflow-x-hidden triggerbox">
+        <Servicedep dep="fourth" />
+            <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-7xl font-bold lg:pb-12 text-center t0">학술 연구 설문조사 데이터 수집,<br />
 한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
 
 
-                <ul className="p-4 lg:p-0 pb-12">
+                <ul className="p-4 lg:p-14">
                     {
-                        checklist.map((i)=>{
+                        checklist.map((i,o)=>{
                             return(
-                                <li className="flex justify-center items-center mb-3 bg-neutral-100 rounded-full font-bold text-base leading-tight lg:text-xl p-2 pr-14 pl-14">
+                                <li className={`flex justify-center items-center mb-3 bg-neutral-100 rounded-full font-bold text-base leading-tight lg:text-xl p-2 pr-14 pl-14 t${o+1}`}>
                                     <i className="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                                 <g clip-path="url(#clip0_2018_2138)">
                                   <path d="M11.52 12.5996L9 15.1196L18 24.1196L36 6.11961L33.48 3.59961L18 19.0796L11.52 12.5996Z" fill="#CD3941"/>
@@ -133,6 +170,7 @@ export default function SectionBottom() {
                         <button className="font-bold text-white text-base lg:text-xl rounded-full p-4 pr-14 pl-14 bg-c3 leading-tight">한국리서치 패널<br />
 소개자료 다운로드(PDF)</button>
                     </div>
+        </div>
         </div>
     );
 }

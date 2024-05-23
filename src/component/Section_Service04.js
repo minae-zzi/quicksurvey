@@ -1,22 +1,66 @@
 
 import Servicedep from "./servicedep";
+import gsap from 'gsap';
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function SectionService04() {
+export default function SectionService04(props) {
    
+     
+  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
+
+  const container = useRef();
+  const tl = useRef();
+  const tl2 = useRef();
+
+
+  useGSAP(()=>{
+    tl.current = gsap.timeline( {
+      scrollTrigger: {
+        trigger: ".triggerbox", 
+        start: "top center", 
+        end: `+=600`,
+        scrub:true
+      }
+    })
+    .from (".t1",{y:50, opacity:0, duration:1})
+    .from (".t2",{y:50, opacity:0, duration:1})
+
+    tl2.current = gsap.timeline( {
+      scrollTrigger: {
+        trigger: ".triggerbox", // 범위를 지정하는 요소
+        start: "top center", // 애니메이션이 시작되는 스크롤 위치
+        end: `bottom bottom`,
+        scrub:true,
+
+      }
+    })
+    .from (".t3",{scale:0, opacity:0, duration:1})
+    .from (".t4",{scale:0, opacity:0, duration:1})
+    .from (".t5",{scale:0, opacity:0, duration:1})
+    .from (".t6",{scale:0, opacity:0, duration:1})
+    .from (".t7",{scale:0, opacity:0, duration:1})
+    .from (".t8",{scale:0, opacity:0, duration:1})
+
+  },{scope: container});
+
+  
     return (
 
- <div className="lg:h-screen relative sample-section w-full p-4 pt-10 pb-10 lg:p-0">
- <Servicedep />
+ <div ref={container} className="lg:h-screen relative sample-section w-full p-4 pt-10 pb-10 lg:p-0">
+ <Servicedep dep="first" />
 
-   <div className='flex justify-start items-center lg:h-screen'>
+   <div className='flex justify-start items-center lg:h-screen triggerbox'>
      <div className="flex gap-4 flex-col lg:grid lg:grid-cols-3 lg:pl-80 lg:pr-40 lg:gap-8 w-full">
        <div className="lg:col-span-3">
-         <p className='text-4xl text-center pb-4 brnone lg:text-left lg:text-7xl font-bold lg:pb-8'>10년 이상의 업력으로 <br />
+         <p className='text-4xl text-center pb-4 brnone lg:text-left lg:text-7xl font-bold lg:pb-8 t1'>10년 이상의 업력으로 <br />
 축적된 다양한 노하우 보유</p>
-       <p className='text-lg pb-4 lg:pb-10 text-center lg:text-left brnone'>10년 이상 축적된 학술 조사 진행 노하우를 바탕으로 다양한 조사 기법을 활용하여<br />
+       <p className='text-lg pb-4 lg:pb-10 text-center lg:text-left brnone t2'>10년 이상 축적된 학술 조사 진행 노하우를 바탕으로 다양한 조사 기법을 활용하여<br />
 다양한 주제와 조사 대상에 대해 빠르고 정확한 조사를 수행할 수 있습니다.</p>
        </div>
-       <div className="rounded-xl bg-gray-50 p-8 lg:p-12">
+       <div className="rounded-xl bg-gray-50 p-8 lg:p-12 t3">
          <p className='flex items-center font-bold text-2xl lg:text-4xl pb-4'><img src={process.env.PUBLIC_URL + '/images/service_ico1.png'} alt="" className='pr-2'></img> 언론/미디어/정치</p>
          <ul className='lg:text-lg text-gray-500'>
            <li>· OTT 이용자 시청 형태 관련 조사</li>
@@ -26,7 +70,7 @@ export default function SectionService04() {
            <li>· 정치와 미디어 연구 조사</li>
          </ul>
        </div>
-       <div className="rounded-xl bg-gray-50 p-8 lg:p-12">
+       <div className="rounded-xl bg-gray-50 p-8 lg:p-12 t4">
          <p className='flex items-center font-bold text-2xl lg:text-4xl pb-4'><img src={process.env.PUBLIC_URL + '/images/service_ico2.png'} alt="" className='pr-2'></img> 의료/보건</p>
          <ul className='lg:text-lg text-gray-500'>
            <li>· 간호사 대상 건강 정보 영상 평가 조사</li>
@@ -36,7 +80,7 @@ export default function SectionService04() {
            <li>· 보육교사 대상 감염병 관련 척도 개발 조사</li>
            </ul>
        </div>
-       <div className="rounded-xl bg-gray-50 p-8 lg:p-12">
+       <div className="rounded-xl bg-gray-50 p-8 lg:p-12 t5">
          <p className='flex items-center font-bold text-2xl lg:text-4xl pb-4'><img src={process.env.PUBLIC_URL + '/images/service_ico3.png'} alt="" className='pr-2'></img> 심리/상담</p>
          <ul className='lg:text-lg text-gray-500'>
            <li>· 대학생 우울 관련 심리적 특성 조사</li>
@@ -46,7 +90,7 @@ export default function SectionService04() {
            <li>· 불공정 상황에서의 심리 경험 조사</li>
            </ul>
        </div>
-       <div className="rounded-xl bg-gray-50 p-8 lg:p-12">
+       <div className="rounded-xl bg-gray-50 p-8 lg:p-12 t6">
          <p className='flex items-center font-bold text-2xl lg:text-4xl pb-4'><img src={process.env.PUBLIC_URL + '/images/service_ico4.png'} alt="" className='pr-2'></img> 직군/산업</p>
          <ul className='lg:text-lg text-gray-500'>
            <li>· 직장 내 세대 소통 활성화 방안 조사</li>
@@ -56,7 +100,7 @@ export default function SectionService04() {
            <li>· 전기자동차 사용자 대상 신규 충전 방식 컨셉 조사</li>
            </ul>
        </div>
-       <div className="rounded-xl bg-gray-50 p-8 lg:p-12">
+       <div className="rounded-xl bg-gray-50 p-8 lg:p-12 t7">
          <p className='flex items-center font-bold text-2xl lg:text-4xl pb-4'><img src={process.env.PUBLIC_URL + '/images/service_ico5.png'} alt="" className='pr-2'></img> 관광</p>
          <ul className='lg:text-lg text-gray-500'>
            <li>· 반려동물 동반 여행 의도 조사</li>
@@ -66,7 +110,7 @@ export default function SectionService04() {
            <li>· 전시컨벤션센터 개최 전시회 경험자 대상 조사</li>
            </ul>
        </div>
-       <div className="rounded-xl bg-gray-50 p-8 lg:p-12">
+       <div className="rounded-xl bg-gray-50 p-8 lg:p-12 t8">
          <p className='flex items-center font-bold text-2xl lg:text-4xl pb-4'><img src={process.env.PUBLIC_URL + '/images/service_ico6.png'} alt="" className='pr-2'></img> 아동/청소년</p>
          <ul className='lg:text-lg text-gray-500'>
            <li>· 아동/청소년 스마트폰 과의존 척도 개발 조사</li>

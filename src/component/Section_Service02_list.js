@@ -8,9 +8,10 @@ const researchlist = [
   
 
 // 첫 번째 컴포넌트
-export function SectionService02List() {
+export function SectionService02List(props) {
     return (
-        <div className='flex flex-row lg:flex-row justify-center items-center gap-2 text-lg w-full lg:w-1/2'>
+        <div className={`flex flex-row lg:flex-row justify-center items-center gap-2 text-lg w-full lg:w-1/2 ${props.className}`}>
+
 
         {/* 첫번째 */}
         <div className='rounded-xl bg-white shadow-xl w-1/2 p-4 lg:p-8 lg:w-[300px]'>
@@ -74,9 +75,9 @@ export function SectionService02List() {
 }
 
 // 두 번째 컴포넌트
-export function SectionService02ListMobile() {
+export function SectionService02ListMobile(props) {
     return (
-        <div className='flex flex-col justify-center items-center'>
+        <div className={`flex flex-col justify-center items-center ${props.className}`}>
         
 
         <div className="flex flex-row gap-4 justify-center items-center p-4">

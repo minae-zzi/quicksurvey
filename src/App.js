@@ -10,20 +10,38 @@ import SectionService04 from './component/Section_Service04';
 import SectionQna from './component/Section_qna';
 import SectionBottom from './component/Section_bottom';
 import Footer from './component/footer';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
+
+
 
 
 
 function App() {
 
+    const lenis = new Lenis()
 
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+    
+    lenis.on('scroll', ScrollTrigger.update)
+    
+    gsap.ticker.add((time)=>{
+      lenis.raf(time * 1000)
+    })
+    
+    gsap.ticker.lagSmoothing(0)
 
-  // const [activeIndex, setActiveIndex] = useState(0);
-  return (
+    // const [activeIndex, setActiveIndex] = useState(0);
+    return (
 
 
 
     <div className='break-keep'>
       <Navigator />
+      
       <Visual />
       <SectionAbout />
       <SectionService01 />
