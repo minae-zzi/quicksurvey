@@ -105,7 +105,7 @@ export default function SectionBottom() {
         <div ref={container}>
              
         <div className="flex flex-col justify-center items-center lg:min-h-screen w-full pt-14 pb-14 lg:p-0 overflow-x-hidden triggerbox">
-        <Servicedep dep="fourth" />
+        
             <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-7xl font-bold lg:pb-12 text-center t0">학술 연구 설문조사 데이터 수집,<br />
 한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
 
@@ -132,7 +132,7 @@ export default function SectionBottom() {
                    
                 </ul>
 
-
+                
       <div className="slider variable-width w-full">
       <Slider {...settings}>
                     {sliderImages.map((src, index) => (
