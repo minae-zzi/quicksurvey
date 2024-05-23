@@ -1,7 +1,7 @@
 
 import React from "react";
 import Slider from "react-slick";
-import Servicedep from "./servicedep";
+
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -104,8 +104,9 @@ export default function SectionBottom() {
     return (
         <div ref={container}>
              
-        <div className="flex flex-col justify-center items-center lg:min-h-screen w-full pt-14 pb-14 lg:p-0 overflow-x-hidden triggerbox">
-        
+        <div className="relative flex flex-col justify-center items-center lg:min-h-screen w-full pt-14 pb-14 lg:p-0 overflow-x-hidden triggerbox">
+  
+
             <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-7xl font-bold lg:pb-12 text-center t0">학술 연구 설문조사 데이터 수집,<br />
 한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
 

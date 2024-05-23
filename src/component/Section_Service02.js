@@ -1,5 +1,5 @@
 import Servicedep from "./servicedep";
-import {  useState, useRef } from "react";
+import {  useState, useRef, useEffect } from "react";
 import { SectionService02List, SectionService02ListMobile} from "./Section_Service02_list"
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -13,7 +13,22 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 
+  // const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
 
   const container = useRef();
   const tl = useRef();

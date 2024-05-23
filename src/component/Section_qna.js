@@ -11,7 +11,7 @@ export default function SectionQna() {
     
       const container = useRef();
       const tl = useRef();
-      const tl2 = useRef();
+
     
     
       useGSAP(()=>{
