@@ -136,39 +136,38 @@ const Pannel = () => {
 
                {/* 두번째 */}
                <div className='rounded-xl bg-white shadow-xl w-full p-8'>
-                <div className='rounded-lg text-xl bg-c1 text-center text-white font-bold p-4 pb-16 -z-10'>의사패널</div>
+                <div className='rounded-lg text-xl bg-c1 text-center text-white font-bold p-4 pb-16 -z-10'>간호사 패널</div>
                 <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-4 -mt-12 z-10'>
-                    <p className='font-extrabold text-3xl text-slate-900 p-2 pb-4'>13,367명</p>
+                    <p className='font-extrabold text-3xl text-slate-900 p-2 pb-4'>1,250명</p>
                     <p className='rounded-full bg-c4 p-2 mb-2'>병원급별</p>
                     <ul className='text-slate-800'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>병원 <span className='absolute right-0 text-zinc-400 font-normal'>10,621명 (79.5%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>의원 <span className='absolute right-0 text-zinc-400 font-normal'>2,746명 (20.5%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>종합병원급 <span className='absolute right-0 text-zinc-400 font-normal'>721명 (57.7%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>병원급 <span className='absolute right-0 text-zinc-400 font-normal'>529명 (42.3%)</span></li>
                     </ul>
-                    <p className='rounded-full bg-c4 p-2 mb-2 mt-4'>진료과목별</p>
+                    <p className='rounded-full bg-c4 p-2 mb-2 mt-4'>병동별</p>
                     <ul className='text-slate-800'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>내과 <span className='absolute right-0 text-zinc-400 font-normal'>4,490명 (33.6%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>외과 <span className='absolute right-0 text-zinc-400 font-normal'>2,742명 (20.5%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>기타진료과 <span className='absolute right-0 text-zinc-400 font-normal'>6,135명 (45.9%)</span></li>
-                    </ul>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>병동 <span className='absolute right-0 text-zinc-400 font-normal'>601명 (48.1%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>병동 외 근무 <span className='absolute right-0 text-zinc-400 font-normal'>649명 (51.9%)</span></li>
+                        </ul>
 
                 </div>
               </div>
 
                {/* 첫번째 */}
                <div className='rounded-xl bg-white shadow-xl w-full p-8'>
-                <div className='rounded-lg text-xl bg-slate-900 text-center text-white font-bold p-4 pb-16 -z-10'>의사패널</div>
+                <div className='rounded-lg text-xl bg-slate-900 text-center text-white font-bold p-4 pb-16 -z-10'>유병자 패널</div>
                 <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-4 -mt-12 z-10'>
-                    <p className='font-extrabold text-3xl text-slate-900 p-2 pb-4'>13,367명</p>
-                    <p className='rounded-full bg-zinc-400 p-2 mb-2'>병원급별</p>
+                    <p className='font-extrabold text-3xl text-slate-900 p-2 pb-4'>59,838명</p>
+                    <p className='rounded-full bg-zinc-400 p-2 mb-2'>성별</p>
                     <ul className='text-slate-800'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>병원 <span className='absolute right-0 text-zinc-400 font-normal'>10,621명 (79.5%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>의원 <span className='absolute right-0 text-zinc-400 font-normal'>2,746명 (20.5%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>남성 <span className='absolute right-0 text-zinc-400 font-normal'>29,499명 (49.3%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>여성 <span className='absolute right-0 text-zinc-400 font-normal'>30,399명 (50.7%)</span></li>
                     </ul>
-                    <p className='rounded-full bg-zinc-400 p-2 mb-2 mt-4'>진료과목별</p>
+                    <p className='rounded-full bg-zinc-400 p-2 mb-2 mt-4'>연령별</p>
                     <ul className='text-slate-800'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>내과 <span className='absolute right-0 text-zinc-400 font-normal'>4,490명 (33.6%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>외과 <span className='absolute right-0 text-zinc-400 font-normal'>2,742명 (20.5%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>기타진료과 <span className='absolute right-0 text-zinc-400 font-normal'>6,135명 (45.9%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>19~30대 <span className='absolute right-0 text-zinc-400 font-normal'>18,748 (31.3%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>40~50대 <span className='absolute right-0 text-zinc-400 font-normal'>22,924명 (38.3%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>60대 이상 <span className='absolute right-0 text-zinc-400 font-normal'>18,166명 (30.4%)</span></li>
                     </ul>
 
                 </div>
@@ -176,19 +175,19 @@ const Pannel = () => {
 
                {/* 두 */}
                <div className='rounded-xl bg-white shadow-xl w-full p-8'>
-                <div className='rounded-lg text-xl bg-c1 text-center text-white font-bold p-4 pb-16 -z-10'>의사패널</div>
+                <div className='rounded-lg text-xl bg-c1 text-center text-white font-bold p-4 pb-16 -z-10'>B2B 패널</div>
                 <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-4 -mt-12 z-10'>
-                    <p className='font-extrabold text-3xl text-slate-900 p-2 pb-4'>13,367명</p>
-                    <p className='rounded-full bg-c4 p-2 mb-2'>병원급별</p>
+                    <p className='font-extrabold text-3xl text-slate-900 p-2 pb-4'>72,844명</p>
+                    <p className='rounded-full bg-c4 p-2 mb-2'>성별</p>
                     <ul className='text-slate-800'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>병원 <span className='absolute right-0 text-zinc-400 font-normal'>10,621명 (79.5%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>의원 <span className='absolute right-0 text-zinc-400 font-normal'>2,746명 (20.5%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>남성 <span className='absolute right-0 text-zinc-400 font-normal'>44,334명 (60.9%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>여성 <span className='absolute right-0 text-zinc-400 font-normal'>28,510명 (39.1%)</span></li>
                     </ul>
-                    <p className='rounded-full bg-c4 p-2 mb-2 mt-4'>진료과목별</p>
+                    <p className='rounded-full bg-c4 p-2 mb-2 mt-4'>연령별</p>
                     <ul className='text-slate-800'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>내과 <span className='absolute right-0 text-zinc-400 font-normal'>4,490명 (33.6%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>외과 <span className='absolute right-0 text-zinc-400 font-normal'>2,742명 (20.5%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>기타진료과 <span className='absolute right-0 text-zinc-400 font-normal'>6,135명 (45.9%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>20~30대 <span className='absolute right-0 text-zinc-400 font-normal'>19,164명 (26.3%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>40대 <span className='absolute right-0 text-zinc-400 font-normal'>24,883명 (34.2%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>50~60대 <span className='absolute right-0 text-zinc-400 font-normal'>28,797명 (39.5%)</span></li>
                     </ul>
 
                 </div>
