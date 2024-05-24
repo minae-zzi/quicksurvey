@@ -88,7 +88,7 @@ function NavigatorMobile() {
   <ul className='text-base p-0 menu-list'>
     {menulist.map((item, index) => (
       <li key={index} className='border-t border-slate-200 p-2'>
-        <a href={item.link}>{item.title}</a>
+        <Link to={item.link}>{item.title}</Link>
       </li>
     ))}
   </ul>
