@@ -16,12 +16,13 @@ module.exports = {
         'c1': '#CA2C34',
         'c2':'#BC9A8F',
         'c3':'#816253',
+        'c4':'rgba(202, 44, 52, 0.5)' 
       }, 
 
       borderRadius: {
         'none': '0',
         'sm': '0.125rem',
-        'md': '0.375rem',
+        'md': '0.875rem',
         'xl':'2rem',
         'lg': '1.8rem',
         'full': '9999px',
