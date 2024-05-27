@@ -5,6 +5,7 @@ import {Navigator, NavigatorMobile} from '../component/nav'
 import HomePage from '../pages/Home';
 import PannelPage from '../pages/Pannel';
 import Inqury from '../pages/Inqury'
+import ScrollToTop from '../component/ScrollToTop';
 
 const AppRouter = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -22,7 +23,9 @@ const AppRouter = () => {
 
   return (
     <Router basename="/quicksurvey">
+      
       {isMobile ? <NavigatorMobile /> : <Navigator />}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/pannel" element={<PannelPage />} />

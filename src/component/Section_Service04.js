@@ -17,14 +17,16 @@ gsap.registerPlugin(useGSAP);
 
 
   useGSAP(()=>{
+
     tl.current = gsap.timeline( {
       scrollTrigger: {
-        trigger: ".triggerbox", 
+        trigger: ".sample-section", 
         start: "top center", 
-        end: `+=600`,
+        end: `+=400`,
         scrub:true
       }
     })
+    .from('.sample-section',{opacity:0})
     .from (".t1",{y:50, opacity:0, duration:1})
     .from (".t2",{y:50, opacity:0, duration:1})
 
@@ -49,7 +51,8 @@ gsap.registerPlugin(useGSAP);
   
     return (
 
- <div ref={container} className="lg:h-screen relative sample-section w-full p-4 pt-10 pb-10 lg:p-0">
+      <div ref={container}>
+ <div className="lg:h-screen relative sample-section w-full p-4 pt-10 pb-10 lg:p-0">
  <Servicedep dep="first" />
 
    <div className='flex justify-start items-center lg:h-screen triggerbox'>
@@ -126,6 +129,6 @@ gsap.registerPlugin(useGSAP);
      </div>
 
  </div>
- 
+ </div>
     );
 }

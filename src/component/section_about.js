@@ -59,7 +59,7 @@ export default function SectionAbout(props) {
     return (
 
 
-  <div ref={aRef} className="lg:h-screen relative w-full flex justify-center items-center p-4">
+  <div ref={aRef} className="lg:min-h-screen relative w-full flex justify-center items-center p-4">
     <Servicedep dep="first" />
   
       <div className='relative text-center sectionAbout'>
