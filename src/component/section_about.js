@@ -1,5 +1,4 @@
 
-import Servicedep from "./servicedep";
 import { useRef } from "react";
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -26,13 +25,9 @@ export default function SectionAbout(props) {
           scrub: true
         }
       })
-      .from (".t1",{y:50, opacity:0, duration:1})
-      .from (".t2",{y:50, opacity:0, duration:1})
-      .fromTo (".whysurvey0",{scale:0}, {scale:1})
-      .fromTo (".whysurvey1",{scale:0}, {scale:1})
-      .fromTo (".whysurvey2",{scale:0}, {scale:1})
-      .fromTo (".whysurvey3",{scale:0}, {scale:1})
-
+      // .from (".t1",{y:50, opacity:0, duration:1})
+      // .from (".t3",{y:50, opacity:0, duration:1})
+      // .from (".t2",{y:50, opacity:0, duration:1})
     },{scope: aRef});
 
    
@@ -60,26 +55,27 @@ export default function SectionAbout(props) {
 
 
   <div ref={aRef} className="lg:min-h-screen relative w-full flex justify-center items-center p-4">
-    <Servicedep dep="first" />
   
       <div className='relative text-center sectionAbout'>
 
-        <div className="pb-8 pt-24 lg:pt-0"><img src={process.env.PUBLIC_URL + '/images/about_img.png'} alt="" /></div>
+        <div className="pb-4 pt-10 lg:pt-6"><img src={process.env.PUBLIC_URL + '/images/about_img.png'} alt="" /></div>
         <div className='inline-block t1'>
-          <p className='inline-block text-3xl lg:text-7xl font-bold'>한국리서치에 의뢰하세요</p>
+          <p className='inline-block text-3xl lg:text-3.5vw font-extrabold'>한국리서치에 의뢰하세요</p>
           <p style={{background:'#F8F0E7', height:'15px', width:'100%', margin:'-10px 0 0 0'}}></p>
         </div>
-  
-        <p className='text-2xl pt-4 lg:text-7xl lg:pt-24 font-bold t2'>왜? 한국리서치 <span className='text-c1'>Quick Survey</span> 인가요?</p>
-  
-          <div className='grid grid-cols-1 lg:grid-cols-4 lg:pr-24 lg:pl-24 lg:mt-8 mt-4 mb-4'>
+        <p className="flex justify-center p-2 lg:pt-6 lg:pb-2 t3"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="39" viewBox="0 0 12 39" fill="none">
+  <path d="M6 38.7735L11.7735 33L6 27.2265L0.226499 33L6 38.7735ZM5 4.37114e-08L5 33L7 33L7 -4.37114e-08L5 4.37114e-08Z" fill="black"/>
+</svg></p>
+        <p className='text-2xl lg:text-3vw font-bold t2'>왜? 한국리서치 <span className='text-c1'>Quick Survey</span> 인가요?</p>
+         
+          <div className='grid grid-cols-1 lg:flex lg:justify-center lg:gap-8 lg:mt-8 mt-4 mb-4'>
 
             {
               whysurvey.map((i,o)=>{
                 return(
                   <div className={`whysurvey${o} flex items-center justify-start p-2 pl-4 pr-4 m-1 bg-zinc-50 rounded-full lg:rounded-none lg:bg-transparent`}>
-                  <span className='font-bold text-3xl lg:text-8xl pr-4 text-gray-200'>{i.id}</span>
-                  <p className="text-base lg:text-3xl font-bold text-left lg:whitespace-pre-line">{i.title}</p>
+                  <span className='font-bold text-3xl lg:text-3.5vw pr-4 text-gray-200'>{i.id}</span>
+                  <p className="text-base lg:text-[1.3vw] lg:leading-[1.6vw] font-bold text-left lg:whitespace-pre-line">{i.title}</p>
                 </div>
                 )
               })

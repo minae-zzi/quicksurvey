@@ -14,7 +14,7 @@ const menulist = [
 function Navigator() {
   const [navClass, setNavClass] = useState('nav');
   const [logoSrc, setLogoSrc] = useState('/images/logo_w.png');
-  const [navText, setNavText] = useState('flex gap-12 text-white');
+  const [navText, setNavText] = useState('flex gap-12 text-white font-bold text-1vw');
 
   useEffect(() => {
     const handleScroll = () => {

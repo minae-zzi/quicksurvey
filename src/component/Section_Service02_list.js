@@ -10,17 +10,17 @@ const researchlist = [
 // 첫 번째 컴포넌트
 export function SectionService02List(props) {
     return (
-        <div className={`flex flex-row lg:flex-row justify-center items-center gap-2 text-lg w-full lg:w-1/2 ${props.className}`}>
+        <div className={`flex flex-row lg:flex-row justify-center items-center gap-2 text-lg w-full lg:w-9/12 ${props.className}`}>
 
 
         {/* 첫번째 */}
-        <div className='rounded-xl bg-white shadow-xl w-1/2 p-4 lg:p-8 lg:w-[300px]'>
-        <div className='rounded-lg bg-c2 text-center text-white font-bold lg:text-xl p-5 pb-14 -z-10'>{researchlist[0].title}</div>
-        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-4 -mt-10 z-10'>
+        <div className='rounded-xl bg-white shadow-xl p-4 lg:p-5'>
+        <div className='rounded-lg bg-c2 text-center text-white font-bold lg:text-1.1vw p-4 pb-14 -z-10'>{researchlist[0].title}</div>
+        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-11 z-10 lg:text-1vw'>
             <ul className='text-slate-800'>
             { researchlist[0].list.map((i)=>{
                 return(
-                <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
+                <li className='rounded-full bg-gray-100 p-2 pl-6 pr-6 mb-1'>{i}</li>
                 )
             })}
             </ul>
@@ -33,13 +33,13 @@ export function SectionService02List(props) {
         </svg></div>
     
         {/* 두번째 */}
-        <div className='rounded-xl bg-white p-4 lg:p-8 shadow-xl w-full lg:w-96'>
-        <div className='rounded-lg bg-c3 text-center text-white font-bold text-xl p-5 pb-14 -z-10'>{researchlist[1].title}</div>
-        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-4 -mt-10 z-10'>
+        <div className='rounded-xl bg-white p-4 shadow-xl lg:p-5'>
+        <div className='rounded-lg bg-c3 text-center text-white font-bold lg:text-1.1vw p-4 pb-14 -z-10'>{researchlist[1].title}</div>
+        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-11 z-10 lg:text-1vw'>
             <ul className='text-slate-800'>
             { researchlist[1].list.map((i)=>{
                 return(
-                <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
+                <li className='rounded-full bg-gray-100 p-2 pl-8 pr-8 mb-1'>{i}</li>
                 )
             })}
             </ul>
@@ -54,13 +54,13 @@ export function SectionService02List(props) {
         </svg></div>
         {/* 세번째 */}
     
-        <div className='rounded-xl bg-white shadow-xl w-full p-4 lg:p-8 lg:w-[300px]'>
-        <div className='rounded-lg bg-c2 text-center text-white font-bold text-xl p-5 pb-14 -z-10'>{researchlist[2].title}</div>
-        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-4 -mt-10 z-10'>
+        <div className='rounded-xl bg-white shadow-xl p-4 lg:p-5'>
+        <div className='rounded-lg bg-c2 text-center text-white font-bold lg:text-1.1vw p-4 pb-14 -z-10'>{researchlist[2].title}</div>
+        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-11 z-10 lg:text-1vw'>
             <ul className='text-slate-800'>
             { researchlist[2].list.map((i)=>{
                 return(
-                <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
+                <li className='rounded-full bg-gray-100 p-2 pl-6 pr-6 mb-1'>{i}</li>
                 )
             })}
             </ul>
@@ -77,67 +77,76 @@ export function SectionService02List(props) {
 // 두 번째 컴포넌트
 export function SectionService02ListMobile(props) {
     return (
-        <div className={`flex flex-col justify-center items-center ${props.className}`}>
+        <div className={`flex flex-col justify-center items-center gap-4 w-10/12 ${props.className}`}>
         
+        <div className='rounded-xl bg-white shadow-xl w-full'>
+            <div className='rounded-lg bg-c3 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[1].title}</div>
+            <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-12 z-10'>
+                <ul className='text-slate-800'>
+                { researchlist[1].list.map((i)=>{
+                    return(
+                    <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
+                    )
+                })}
+                </ul>
+        
+            </div>
+        </div>
+        
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 40 52" fill="none">
+  <rect width="26.5735" height="26.5735" transform="matrix(0.707107 0.707107 0.707107 -0.707107 1 31.209)" fill="#BC9A8F"/>
+  <rect x="2.12132" y="1.78814e-07" width="17.9182" height="17.9182" transform="matrix(0.707107 0.707107 0.707107 -0.707107 4.96995 15.291)" fill="#F4F0EE" stroke="#BC9A8F" stroke-width="3"/>
+</svg></p>
 
-        <div className="flex flex-row gap-4 justify-center items-center p-4">
-        {/* 첫번째 */}
-        <div className='rounded-xl bg-white shadow-xl w-1/2'>
+        <div className='rounded-xl bg-white shadow-xl w-full'>
             <div className='rounded-lg bg-c2 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[0].title}</div>
             <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-12 z-10'>
                 <ul className='text-slate-800'>
-                { researchlist[0].list.map((i,o)=>{
+                { researchlist[1].list.map((i)=>{
                     return(
                     <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
                     )
                 })}
                 </ul>
+        
             </div>
         </div>
-        
-        {/* 세번째 */}
-    
-        <div className='rounded-xl bg-white shadow-xl w-1/2'>
+            
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 40 52" fill="none">
+  <rect width="26.5735" height="26.5735" transform="matrix(0.707107 0.707107 0.707107 -0.707107 1 31.209)" fill="#BC9A8F"/>
+  <rect x="2.12132" y="1.78814e-07" width="17.9182" height="17.9182" transform="matrix(0.707107 0.707107 0.707107 -0.707107 4.96995 15.291)" fill="#F4F0EE" stroke="#BC9A8F" stroke-width="3"/>
+</svg></p>
+
+        <div className='rounded-xl bg-white shadow-xl w-full'>
             <div className='rounded-lg bg-c2 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[2].title}</div>
             <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-12 z-10'>
                 <ul className='text-slate-800'>
-                { researchlist[2].list.map((i)=>{
+                { researchlist[1].list.map((i)=>{
                     return(
                     <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
                     )
                 })}
                 </ul>
+        
             </div>
         </div>
+
+            
+        
+
+
+
         </div>
         
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 52" fill="none">
-        <rect width="26.5735" height="26.5735" transform="matrix(0.707107 0.707107 0.707107 -0.707107 1 31.209)" fill="#BC9A8F"/>
-        <rect x="2.12132" y="1.78814e-07" width="17.9182" height="17.9182" transform="matrix(0.707107 0.707107 0.707107 -0.707107 4.96995 15.291)" fill="#F4F0EE" stroke="#BC9A8F" stroke-width="3"/>
-        </svg></div>
-
-        {/* 두번째 */}
-        <div className="flex w-full p-4">
-        <div className='rounded-xl bg-white shadow-xl w-full'>
-        <div className='rounded-lg bg-c3 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[1].title}</div>
-        <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-12 z-10'>
-            <ul className='text-slate-800'>
-            { researchlist[1].list.map((i)=>{
-                return(
-                <li className='rounded-full bg-gray-100 p-2 mb-2'>{i}</li>
-                )
-            })}
-            </ul>
     
-        </div>
-        </div>
-        </div>
+ 
+
     
        
     
     
     
-        </div>
+
 
     )
 }

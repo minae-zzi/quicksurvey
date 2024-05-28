@@ -36,13 +36,18 @@
 
   @media (min-width: 768px) {
     .sample-section {
-      background: url('../public/images/dep4_img.png') right 5%;
+      background: url('../public/images/dep4_img.png') right 7.5%;
       background-repeat: no-repeat;
+      background-size:auto 35%;
     }
   }
   
   .bb {border:1px solid #000;}
 
+  .system_blet {
+      background: url('../public/images/system_blet.png') right 50%;
+      background-repeat: no-repeat;
+  }
   .stepico_1 {
     background:url('../public/images/step_ico1.svg');
     background-repeat: no-repeat;

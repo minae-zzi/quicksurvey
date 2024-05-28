@@ -11,18 +11,18 @@ export default function Servicedep({ dep }) {
   ];
 
   return (
-    <div className='absolute left-5 top-1/2 hidden lg:block'>
-      <ul className="flex flex-col">
-        <li className="flex items-center h-8">
+    <div className='absolute left-5 top-1/2 hidden lg:block text-1vw'>
+      <ul className="flex flex-col gap-2">
+        <li className="flex items-center">
           <span className="pr-2"><img src={`${process.env.PUBLIC_URL}/images/${bletImages[0]}`} alt="" /></span> 서비스 특장점
         </li>
-        <li className="flex items-center h-8">
+        <li className="flex items-center">
           <span className="pr-2"><img src={`${process.env.PUBLIC_URL}/images/${bletImages[1]}`} alt="" /></span> 진행절차
         </li>
-        <li className="flex items-center h-8">
+        <li className="flex items-center">
           <span className="pr-2"><img src={`${process.env.PUBLIC_URL}/images/${bletImages[2]}`} alt="" /></span> 진행방법
         </li>
-        <li className="flex items-center h-8">
+        <li className="flex items-center">
           <span className="pr-2"><img src={`${process.env.PUBLIC_URL}/images/${bletImages[3]}`} alt="" /></span> 주요 고객사
         </li>
       </ul>
