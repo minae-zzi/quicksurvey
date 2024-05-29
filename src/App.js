@@ -3,6 +3,8 @@ import React from 'react';
 import AppRouter from './Router/AppRouter';
 import './App.css';
 import { useEffect } from 'react';
+import 'pretendard/dist/web/static/pretendard.css';
+
 
 function App() {
   useEffect(() => {

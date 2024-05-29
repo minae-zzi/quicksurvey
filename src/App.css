@@ -4,24 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Pretendard';
+
+
+/* @font-face {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-medium.woff2') format('woff2'),
        url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-medium.woff') format('woff');
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 
 html {
   -webkit-font-smoothing: antialiased; /* 개선된 폰트 렌더링을 위해 추가 */
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Pretendard', sans-serif; 
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   overflow-x: hidden; 
 }
 
 * {
-  font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  
 }
 
 
