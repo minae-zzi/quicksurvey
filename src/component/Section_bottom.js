@@ -21,11 +21,11 @@ export default function SectionBottom() {
         <div className="relative flex flex-col justify-center items-center lg:min-h-screen lg:pt-[8%] lg:pb-[8%] w-full pt-14 pb-14">
   
 
-            <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-3.5vw font-extrabold lg:pb-6 text-center t0">학술 연구 설문조사 데이터 수집,<br />
-한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
+            <p className="text-4xl brnone pl-8 pr-8 pb-8 lg:text-3.5vw font-extrabold lg:pb-6 text-center t0">학술 연구 설문조사 데이터 수집, <br />
+한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
 
 
-<ul className="p-4 lg:p-14 lg:pt-2 lg:pb-2 flex flex-col items-center">
+<ul className="p-4 lg:p-14 lg:pt-4 lg:pb-4 flex flex-col items-center">
       {checklist.map((item, index) => (
         <li
           key={index}
@@ -62,7 +62,7 @@ export default function SectionBottom() {
         </li>
       ))}
     </ul>
-                    <ul className="grid grid-cols-4 lg:grid-cols-12 gap-2 w-full pt-4 pb-4">
+                    <ul className="grid grid-cols-4 justify-center items-center lg:grid-cols-8 lg:gap-4 lg:pt-10 lg:pb-10 pt-4 pb-4 lg:w-8/12 justify-items-center">
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo1.png'} alt="quicksurvey" /></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo2.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo3.png'} alt="quicksurvey"/></li>
@@ -90,12 +90,12 @@ export default function SectionBottom() {
                     </ul>
     
 
-                    <div className="font-bold text-xl lg:text-1.1vw p-4 pb-2 text-center">수 많은 고객사들이 한국리서치 <span className="text-c1">QuickSurvey</span> 함께하고 있습니다</div>
+                    <div className="font-bold text-xl lg:text-1.1vw p-4 pb-2 text-center">수 많은 고객사들이 한국리서치 <span className="text-c1">Quick Survey</span> 함께하고 있습니다</div>
                     <div className="flex lg:flex-row flex-col justify-center gap-2 lg:gap-4 pt-4">
-                        <button className="font-bold text-white text-base lg:text-1.0vw lg:pl-14 lg:pr-14 rounded-full p-4 pr-14 pl-14 bg-c1 leading-tight">한국리서치 Quick Survey<br />
-소개자료 다운로드(PDF)</button>
-                        <button className="font-bold text-white text-base lg:text-1.0vw lg:pl-14 lg:pr-14 rounded-full p-4 pr-14 pl-14 bg-c3 leading-tight">한국리서치 패널<br />
-소개자료 다운로드(PDF)</button>
+                        <a href={process.env.PUBLIC_URL + '/file/한국리서치 학술연구조사 Quick Survey 소개서(2024).pdf'} target="_blank"><button className="font-bold text-white text-base lg:text-1.0vw lg:pl-14 lg:pr-14 rounded-full p-4 pr-14 pl-14 bg-c1 leading-tight">한국리서치 Quick Survey<br />
+소개자료 다운로드(PDF)</button></a>
+<a href={process.env.PUBLIC_URL + '/file/한국리서치 MS패널 소개서(2024).pdf'} target="_blank"><button className="font-bold text-white text-base lg:text-1.0vw lg:pl-14 lg:pr-14 rounded-full p-4 pr-14 pl-14 bg-c3 leading-tight">한국리서치 패널<br />
+소개자료 다운로드(PDF)</button></a>
                     </div>
         </div>
         </div>

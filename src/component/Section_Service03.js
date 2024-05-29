@@ -20,7 +20,7 @@ export default function SectionService03(props) {
 
  <div className="relative service-section lg:h-screen w-full bb t0">
   <div className="text-white">
-  <Servicedep dep="first"/>
+
   </div>
    <div className='flex flex-col justify-center items-center p-4 pt-14 pb-14 lg:p-0 lg:h-screen triggerbox'>
        <div className='text-4xl font-extrabold pb-4 text-center text-white lg:text-3.5vw lg:pb-[1%] t1'>신뢰할 수 있는 데이터</div>

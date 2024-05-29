@@ -1,54 +1,10 @@
-
-import Servicedep from "./servicedep";
-import gsap from 'gsap';
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { Link } from 'react-router-dom';
 
 
 
 export default function SectionService01(props) {
 
   
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(useGSAP);
-
-  // const viewportHeight = window.innerHeight; // 현재 뷰포트의 세로 크기를 가져옵니다.
-
-  // const container = useRef();
-  // const tl2 = useRef();
-  // const tl3 = useRef();
-
-  // useGSAP(()=>{
-  //   tl2.current = gsap.timeline( {
-  //     scrollTrigger: {
-  //       trigger: ".sectionbox", // 범위를 지정하는 요소
-  //       start: "top top", // 애니메이션이 시작되는 스크롤 위치
-  //       end: `+=${viewportHeight}`,
-  //       anticipatePin: 1,
-  //       pin: true,
-  //       scrub:true
-  //     }
-  //   })
-  //   .from('.serviceimg',{y:-600, autoAlpha:0});
-
-  //   tl3.current = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".sectionbox", // 범위를 지정하는 요소
-  //       start: "top center", // 애니메이션이 시작되는 스크롤 위치
-  //       end: "bottom center",
-  //       scrub:true
-  //     }
-  //   })
-
-  //   .from (".t1",{y:50, opacity:0, duration:1})
-  //   .from (".t2",{y:50, opacity:0, duration:1})
-  //   .from (".t3",{y:50, opacity:0, duration:1})
-  // },{scope: container});
-
- 
-
-
     return (
 
 
@@ -65,9 +21,9 @@ gsap.registerPlugin(useGSAP);
         한국리서치는 92만명의 자체 패널을 보유하고 있습니다. <br />
 
 지역, 성, 연령 분포를 고려하여 모집하여 통계적 대표성을 확보했으며, <br />
-국가 승인 통계 조사 표본 설계에도 활용되어 신뢰성이 검증되었습니다.<br />
+국가 승인 통계 조사 표본 설계에도 활용되어 신뢰성이 검증되었습니다. <br />
 주기적인 패널 정보 업데이트를 통해 적격응답자를 빠르게 찾을 수 있습니다.</div>
-      <button className='t3 rounded-full bg-c2 text-white text-lg w-3/4 lg:w-2/5 lg:text-1.2vw p-3'>패널소개 더보기</button>
+      <button className='t3 rounded-full bg-c2 text-white text-lg w-3/4 lg:w-2/5 lg:text-1.2vw p-3'><Link to="/pannel">패널소개 더보기</Link></button>
     </div>
     
     <div className='w-full h-96 lg:h-screen lg:w-2/4 service-img lg:rounded-tl-[400px] serviceimg'></div>

@@ -11,14 +11,14 @@ export default function SectionService04(props) {
 
 
  <div className="lg:min-h-screen relative sample-section w-full p-4 pt-10 pb-10">
- <Servicedep dep="first" />
+
 
    <div className='flex justify-start items-center lg:pt-[8%]'>
      <div className="flex gap-4 flex-col lg:grid lg:grid-cols-3 lg:pl-[20%] lg:pr-[40px] lg:gap-4 w-full">
        <div className="lg:col-span-3">
          <p className='text-4xl text-center p-4 brnone lg:text-left lg:text-3.5vw font-extrabold lg:pb-6'>10년 이상의 업력으로 <br />
 축적된 다양한 노하우 보유</p>
-       <p className='text-base text-zinc-500 p-4 pt-0 lg:pb-6 text-center lg:text-left lg:text-1vw brnone t2'>10년 이상 축적된 학술 조사 진행 노하우를 바탕으로 다양한 조사 기법을 활용하여<br />
+       <p className='text-base text-zinc-500 p-4 pt-0 lg:pb-6 text-center lg:text-left lg:text-1vw brnone t2'>10년 이상 축적된 학술 조사 진행 노하우를 바탕으로 다양한 조사 기법을 활용하여 <br />
 다양한 주제와 조사 대상에 대해 빠르고 정확한 조사를 수행할 수 있습니다.</p>
        </div>
        <div className="rounded-xl bg-gray-50 p-8 lg:p-[2.5vw] t3">

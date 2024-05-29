@@ -7,14 +7,14 @@ export default function SectionStep() {
 
     return (
         <div className="relative sectionStep flex flex-col justify-center lg:flex-row lg:justify-between lg:items-center lg:pl-[20%] lg:pr-[10%] lg:gap-20 lg:min-h-screen p-4 pt-14 pb-14">
-            <Servicedep dep="second"/>
+ 
             <div className="flex flex-col items-center lg:items-start triggerbox">
                 <p className="font-extrabold text-4xl text-center lg:text-left lg:text-4vw t1">한국리서치<br/>
                 <span className="text-c1">Quick Survey</span><br/>
                 어떻게 진행되나요?</p>
 
-                <button className='t3 rounded-full bg-zinc-800 text-white text-lg w-3/4 lg:w-4/5 lg:text-1.2vw p-3 lg:mt-12 mt-4'>
-                    온라인 조사 화면 체험하기
+                <button onClick={() => window.open("https://b22.hrcglobal.com/?PN=pkQSP01", "_blank")} className='t3 rounded-full bg-zinc-800 text-white text-lg w-3/4 lg:w-4/5 lg:text-1.2vw p-3 lg:mt-12 mt-4'>
+                   온라인 조사 화면 체험하기
                 </button>
                <p className="pt-4 pl-4 leading-tight lg:text-left lg:text-1vw text-center t2">학술 조사에서 많이 사용하는<br />
 문항 형태를 직접 체험해 보실 수 있습니다</p>

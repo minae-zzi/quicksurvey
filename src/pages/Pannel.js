@@ -271,7 +271,7 @@ const Pannel = () => {
             </div>
 
             <div className='flex flex-col lg:flex-row lg:justify-between items-center lg:w-9/12 lg:min-w-[1000px] pt-14 w-full'>
-              <div className='flex flex-col justify-center items-center'>
+              <div className='flex flex-col justify-center items-center border-b border-brown-200 w-full pb-4 lg:border-none lg:w-auto'>
                 <p><img src={`${process.env.PUBLIC_URL}/images/pannel_tag.png`} alt="" /></p>
                 <p className='text-c1 font-bold text-xl'>Master Sample</p>
                 <p className='font-bold text-4xl lg:text-2vw'>등급제도</p>
@@ -284,61 +284,72 @@ const Pannel = () => {
                   <div className="text-zinc-500">신규 가입 패널</div>
                 </li>
 
-                <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
-                  <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>2</div> 
+                <li className='flex flex-wrap lg:flex-nowrap items-center gap-2 w-full'>
+                  <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>2</div> 
                   <div className="lg:min-w-[12%]">불성실 패널</div> 
                   <div className="text-zinc-500">1,2,3회 불성실 응답자</div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
-                  <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
+                  <div className='flex lg:block lg:p-1 lg:pl-5 lg:pr-5 w-full lg:w-auto text-xs lg:text-1vw lg:text-center lg:mt-0 lg:rounded-full text-c1 lg:border lg:border-red-200 leading-tight'>
+                    <span className='inline-block h-full lg:hidden mr-3'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 16.7072C12.1055 16.5197 12.0002 16.2654 12.0002 16.0002C12.0002 15.735 12.1055 15.4807 12.293 15.2932L14.586 13.0002L8.99997 13.0002C7.14345 13.0002 5.36298 12.2627 4.05022 10.95C2.73747 9.6372 1.99997 7.85673 1.99997 6.00021L1.99997 4.00021C1.99997 3.735 2.10533 3.48064 2.29286 3.2931C2.4804 3.10557 2.73475 3.00021 2.99997 3.00021C3.26519 3.00021 3.51954 3.10557 3.70708 3.2931C3.89461 3.48064 3.99997 3.735 3.99997 4.00021L3.99997 6.00021C3.99997 7.32629 4.52675 8.59806 5.46444 9.53575C6.40212 10.4734 7.67389 11.0002 8.99997 11.0002L14.586 11.0002L12.293 8.70721C12.1975 8.61497 12.1213 8.50462 12.0689 8.38262C12.0165 8.26061 11.9889 8.12939 11.9877 7.99661C11.9866 7.86383 12.0119 7.73216 12.0621 7.60926C12.1124 7.48636 12.1867 7.37471 12.2806 7.28082C12.3745 7.18693 12.4861 7.11267 12.609 7.06239C12.7319 7.01211 12.8636 6.98681 12.9964 6.98796C13.1292 6.98912 13.2604 7.0167 13.3824 7.06911C13.5044 7.12152 13.6147 7.1977 13.707 7.29321L17.707 11.2932C17.8944 11.4807 17.9998 11.735 17.9998 12.0002C17.9998 12.2654 17.8944 12.5197 17.707 12.7072L13.707 16.7072C13.5194 16.8947 13.2651 17 13 17C12.7348 17 12.4805 16.8947 12.293 16.7072Z" fill="#CD3941"/>
+                  </svg></span>
                     1,2회 경고 이메일 보냄,<br className='lg:hidden' />3회 시 Master Sample 해지
                   </div>
                 </li>
 
 
 
-                <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
-                  <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>3</div> 
+                <li className='flex flex-wrap lg:flex-nowrap items-center gap-2 w-full'>
+                  <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>3</div> 
                   <div className="lg:min-w-[12%] pr-2">활성 패널</div> 
                   <div className="text-zinc-500">현재 진행 중인 응답자</div>
                 </li>
 
-                <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
-                  <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>4</div> 
+                <li className='flex flex-wrap lg:flex-nowrap items-center gap-2 w-full'>
+                  <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>4</div> 
                   <div className="lg:min-w-[12%] pr-2">휴면 패널</div> 
                   <div className="text-zinc-500">1년간 접속이 없는 응답자 </div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
-                  <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
-                  변경 확인 후 대응
+                  <div className='flex lg:block lg:p-1 lg:pl-5 lg:pr-5 w-full lg:w-auto text-xs lg:text-1vw lg:text-center lg:mt-0 lg:rounded-full text-c1 lg:border lg:border-red-200 leading-tight'>
+                    <span className='inline-block h-full lg:hidden mr-3'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 16.7072C12.1055 16.5197 12.0002 16.2654 12.0002 16.0002C12.0002 15.735 12.1055 15.4807 12.293 15.2932L14.586 13.0002L8.99997 13.0002C7.14345 13.0002 5.36298 12.2627 4.05022 10.95C2.73747 9.6372 1.99997 7.85673 1.99997 6.00021L1.99997 4.00021C1.99997 3.735 2.10533 3.48064 2.29286 3.2931C2.4804 3.10557 2.73475 3.00021 2.99997 3.00021C3.26519 3.00021 3.51954 3.10557 3.70708 3.2931C3.89461 3.48064 3.99997 3.735 3.99997 4.00021L3.99997 6.00021C3.99997 7.32629 4.52675 8.59806 5.46444 9.53575C6.40212 10.4734 7.67389 11.0002 8.99997 11.0002L14.586 11.0002L12.293 8.70721C12.1975 8.61497 12.1213 8.50462 12.0689 8.38262C12.0165 8.26061 11.9889 8.12939 11.9877 7.99661C11.9866 7.86383 12.0119 7.73216 12.0621 7.60926C12.1124 7.48636 12.1867 7.37471 12.2806 7.28082C12.3745 7.18693 12.4861 7.11267 12.609 7.06239C12.7319 7.01211 12.8636 6.98681 12.9964 6.98796C13.1292 6.98912 13.2604 7.0167 13.3824 7.06911C13.5044 7.12152 13.6147 7.1977 13.707 7.29321L17.707 11.2932C17.8944 11.4807 17.9998 11.735 17.9998 12.0002C17.9998 12.2654 17.8944 12.5197 17.707 12.7072L13.707 16.7072C13.5194 16.8947 13.2651 17 13 17C12.7348 17 12.4805 16.8947 12.293 16.7072Z" fill="#CD3941"/>
+                  </svg></span>변경 확인 후 대응
                   </div>
                 </li>
 
-                <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
-                  <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>5</div> 
+                <li className='flex flex-wrap lg:flex-nowrap items-center gap-2 w-full'>
+                  <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>5</div> 
                   <div className="lg:min-w-[12%] pr-2">불량 패널</div> 
                   <div className="text-zinc-500">비 매너, 누리꾼, 불량 응답자 </div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
-                  <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
-                   Master Sample 해지
+                  <div className='flex lg:block lg:p-1 lg:pl-5 lg:pr-5 w-full lg:w-auto text-xs lg:text-1vw lg:text-center lg:mt-0 lg:rounded-full text-c1 lg:border lg:border-red-200 leading-tight'>
+                    <span className='inline-block h-full lg:hidden mr-3'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 16.7072C12.1055 16.5197 12.0002 16.2654 12.0002 16.0002C12.0002 15.735 12.1055 15.4807 12.293 15.2932L14.586 13.0002L8.99997 13.0002C7.14345 13.0002 5.36298 12.2627 4.05022 10.95C2.73747 9.6372 1.99997 7.85673 1.99997 6.00021L1.99997 4.00021C1.99997 3.735 2.10533 3.48064 2.29286 3.2931C2.4804 3.10557 2.73475 3.00021 2.99997 3.00021C3.26519 3.00021 3.51954 3.10557 3.70708 3.2931C3.89461 3.48064 3.99997 3.735 3.99997 4.00021L3.99997 6.00021C3.99997 7.32629 4.52675 8.59806 5.46444 9.53575C6.40212 10.4734 7.67389 11.0002 8.99997 11.0002L14.586 11.0002L12.293 8.70721C12.1975 8.61497 12.1213 8.50462 12.0689 8.38262C12.0165 8.26061 11.9889 8.12939 11.9877 7.99661C11.9866 7.86383 12.0119 7.73216 12.0621 7.60926C12.1124 7.48636 12.1867 7.37471 12.2806 7.28082C12.3745 7.18693 12.4861 7.11267 12.609 7.06239C12.7319 7.01211 12.8636 6.98681 12.9964 6.98796C13.1292 6.98912 13.2604 7.0167 13.3824 7.06911C13.5044 7.12152 13.6147 7.1977 13.707 7.29321L17.707 11.2932C17.8944 11.4807 17.9998 11.735 17.9998 12.0002C17.9998 12.2654 17.8944 12.5197 17.707 12.7072L13.707 16.7072C13.5194 16.8947 13.2651 17 13 17C12.7348 17 12.4805 16.8947 12.293 16.7072Z" fill="#CD3941"/>
+                  </svg></span>Master Sample 해지
                   </div>
                 </li>
 
-                <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
-                  <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>6</div> 
+                <li className='flex flex-wrap lg:flex-nowrap items-center gap-2 w-full'>
+                  <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>6</div> 
                   <div className="lg:min-w-[12%] pr-2">탈퇴 희망자</div> 
                   <div className="text-zinc-500">본인이 탈퇴를 원하는 자</div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
-                  <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
-                   Master Sample 해지
+                  <div className='flex lg:block lg:p-1 lg:pl-5 lg:pr-5 w-full lg:w-auto text-xs lg:text-1vw lg:text-center lg:mt-0 lg:rounded-full text-c1 lg:border lg:border-red-200 leading-tight'>
+                    <span className='inline-block h-full lg:hidden mr-3'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 16.7072C12.1055 16.5197 12.0002 16.2654 12.0002 16.0002C12.0002 15.735 12.1055 15.4807 12.293 15.2932L14.586 13.0002L8.99997 13.0002C7.14345 13.0002 5.36298 12.2627 4.05022 10.95C2.73747 9.6372 1.99997 7.85673 1.99997 6.00021L1.99997 4.00021C1.99997 3.735 2.10533 3.48064 2.29286 3.2931C2.4804 3.10557 2.73475 3.00021 2.99997 3.00021C3.26519 3.00021 3.51954 3.10557 3.70708 3.2931C3.89461 3.48064 3.99997 3.735 3.99997 4.00021L3.99997 6.00021C3.99997 7.32629 4.52675 8.59806 5.46444 9.53575C6.40212 10.4734 7.67389 11.0002 8.99997 11.0002L14.586 11.0002L12.293 8.70721C12.1975 8.61497 12.1213 8.50462 12.0689 8.38262C12.0165 8.26061 11.9889 8.12939 11.9877 7.99661C11.9866 7.86383 12.0119 7.73216 12.0621 7.60926C12.1124 7.48636 12.1867 7.37471 12.2806 7.28082C12.3745 7.18693 12.4861 7.11267 12.609 7.06239C12.7319 7.01211 12.8636 6.98681 12.9964 6.98796C13.1292 6.98912 13.2604 7.0167 13.3824 7.06911C13.5044 7.12152 13.6147 7.1977 13.707 7.29321L17.707 11.2932C17.8944 11.4807 17.9998 11.735 17.9998 12.0002C17.9998 12.2654 17.8944 12.5197 17.707 12.7072L13.707 16.7072C13.5194 16.8947 13.2651 17 13 17C12.7348 17 12.4805 16.8947 12.293 16.7072Z" fill="#CD3941"/>
+                  </svg></span>Master Sample 해지
                   </div>
                 </li>
 
-                <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
-                  <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>7</div> 
+                <li className='flex flex-wrap lg:flex-nowrap items-center gap-2 w-full'>
+                  <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>7</div> 
                   <div className="lg:min-w-[12%] pr-2">과다 참여 패널</div> 
                   <div className="text-zinc-500">연 24회 이상, 월 3회 이상 참여 제한 패널</div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
-                  <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
-                   설문 전달 축소
+                  <div className='flex lg:block lg:p-1 lg:pl-5 lg:pr-5 w-full lg:w-auto text-xs lg:text-1vw lg:text-center lg:mt-0 lg:rounded-full text-c1 lg:border lg:border-red-200 leading-tight'>
+                    <span className='inline-block h-full lg:hidden mr-3'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 16.7072C12.1055 16.5197 12.0002 16.2654 12.0002 16.0002C12.0002 15.735 12.1055 15.4807 12.293 15.2932L14.586 13.0002L8.99997 13.0002C7.14345 13.0002 5.36298 12.2627 4.05022 10.95C2.73747 9.6372 1.99997 7.85673 1.99997 6.00021L1.99997 4.00021C1.99997 3.735 2.10533 3.48064 2.29286 3.2931C2.4804 3.10557 2.73475 3.00021 2.99997 3.00021C3.26519 3.00021 3.51954 3.10557 3.70708 3.2931C3.89461 3.48064 3.99997 3.735 3.99997 4.00021L3.99997 6.00021C3.99997 7.32629 4.52675 8.59806 5.46444 9.53575C6.40212 10.4734 7.67389 11.0002 8.99997 11.0002L14.586 11.0002L12.293 8.70721C12.1975 8.61497 12.1213 8.50462 12.0689 8.38262C12.0165 8.26061 11.9889 8.12939 11.9877 7.99661C11.9866 7.86383 12.0119 7.73216 12.0621 7.60926C12.1124 7.48636 12.1867 7.37471 12.2806 7.28082C12.3745 7.18693 12.4861 7.11267 12.609 7.06239C12.7319 7.01211 12.8636 6.98681 12.9964 6.98796C13.1292 6.98912 13.2604 7.0167 13.3824 7.06911C13.5044 7.12152 13.6147 7.1977 13.707 7.29321L17.707 11.2932C17.8944 11.4807 17.9998 11.735 17.9998 12.0002C17.9998 12.2654 17.8944 12.5197 17.707 12.7072L13.707 16.7072C13.5194 16.8947 13.2651 17 13 17C12.7348 17 12.4805 16.8947 12.293 16.7072Z" fill="#CD3941"/>
+                  </svg></span>설문 전달 축소
                   </div>
                 </li>
 
