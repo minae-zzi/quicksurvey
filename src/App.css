@@ -11,7 +11,7 @@
   font-style: normal;
 }
 
-html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: 'Pretendard'; overflow-x:hidden; }
+html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: 'Pretendard', sans-serif; overflow-x:hidden; }
 * {font-family: 'Pretendard', sans-serif;}
 
 @media screen and (max-width: 768px) {
