@@ -22,10 +22,10 @@ const Pannel = () => {
   <circle cx="1.5" cy="1.5" r="1.5" fill="#CD3941"/>
 </svg></span>)
 
-  const blet2 = (<span className='pr-2 align-middle	'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+  const blet2 = (<p className=' align-middle flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" className='mr-2'>
   <path d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z" fill="#CD3941"/>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" fill="#CD3941"/>
-  </svg></span>)
+  </svg></p>)
 
   const merit = [
     { ico:(<img src={`${process.env.PUBLIC_URL}/images/pannel_ico1.png`} alt="" />) , 
@@ -77,7 +77,7 @@ const Pannel = () => {
         <a name="section1"></a>
         <div className='pt-14 pb-14 p-4 lg:pt-[5%] lg:pb-[10%] lg:min-h-screen flex flex-col justify-items-center items-center justify-center text-center'>
           <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-bold'>한국리서치 <span className='text-c1'>MasterSample</span>이란?</p>
-          <p className='lg:pb[4.5%] text-zinc-500 lg:1vw brnone'>한국리서치는 자발적인 조사 참여 의향을 가진 약 92만명의 자체 Master Sample® 을 보유하고 있습니다.<br />
+          <p className='lg:pb[4.5%] text-zinc-500 lg:1vw brnone p-4'>한국리서치는 자발적인 조사 참여 의향을 가진 약 92만명의 자체 Master Sample® 을 보유하고 있습니다. <br />
 통계적 대표성을 확보한 Master Sample® 을 활용하여 다양한 주제의 조사에서 적격응답자를 신속하게 확보할 수 있으며, 조사 결과의 정확성을 높일 수 있습니다.</p>
 
           <div className='grid lg:grid-flow-col lg:gird-rows-2 gap-8 w-11/12 lg:w-9/12 pt-10'>
@@ -87,7 +87,7 @@ const Pannel = () => {
             </div>
             <div className='shadow-lg rounded-2xl p-8 w-full'>
               <p className='text-2xl lg:text-1.8vw font-extrabold pb-4 text-left'>연령별</p>
-              <ul className='font-bold text-sm lg:text-1vw grid lg:gap-2 lg:grid-cols-2 text-left items-center'>
+              <ul className='font-bold text-sm lg:text-1vw grid lg:gap-2 lg:grid-cols-2 text-left items-center flex'>
                 <li className='relative flex items-center'>{blet} 15-19세 <span className='absolute right-0 text-zinc-600'>66,890명 <span className='text-c1 lg:pr-4'>7.3%</span></span></li>
                 <li className='relative flex items-center'>{blet} 20-29세 <span className='absolute right-0 text-zinc-600'>282,430명 <span className='text-c1'>30.7%</span></span></li>
                 <li className='relative flex items-center'>{blet} 30-39세 <span className='absolute right-0 text-zinc-600'>157,967명 <span className='text-c1 lg:pr-4'>17.2%</span></span></li>
@@ -112,7 +112,7 @@ const Pannel = () => {
           <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-extrabold'>한국리서치 <span className='text-c1'>특수 패널</span></p>
           <p className='brnone pb-6 lg:pb-[2.5%] text-zinc-500'>이 외에도 한국리서치는 특수 패널을 구축하여 보다 빠르고 정확하게 적격응답자를 찾을 수 있습니다</p>
 
-            <div className='flex flex-col gap-6 lg:flex-row lg:gap-6 lg:w-10/12 2xl:w-7/12 w-11/12 justify-center'>
+            <div className='flex flex-col gap-6 lg:flex-row lg:gap-6 lg:w-9/12 w-11/12 justify-center'>
 
               {/* 첫번째 */}
               <div className='rounded-xl bg-white shadow-xl w-full p-8 lg:p-[2.5%]'>
@@ -196,18 +196,18 @@ const Pannel = () => {
 
             </div>
 
-            <div className='flex flex-col lg:flex-row justify-start text-left items-center mt-8 lg:w-10/12 2xl:w-7/12 w-10/12'>
+            <div className='flex flex-col lg:flex-row justify-start text-left items-center mt-8 lg:w-9/12 w-10/12'>
               <div className='w-full lg:w-3/12 bg-c1 text-white p-4 font-bold text-xl lg:text-1.2vw text-center rounded-full'>확대예정패널</div>
               <div className='hidden lg:block'><svg xmlns="http://www.w3.org/2000/svg" width="78" height="12" viewBox="0 0 78 12" fill="none">
                 <path d="M66.6667 5.99999C66.6667 8.94551 69.0545 11.3333 72 11.3333C74.9455 11.3333 77.3333 8.94551 77.3333 5.99999C77.3333 3.05447 74.9455 0.66666 72 0.66666C69.0545 0.66666 66.6667 3.05448 66.6667 5.99999ZM8.74228e-08 7L72 6.99999L72 4.99999L-8.74228e-08 5L8.74228e-08 7Z" fill="#CD3941"/>
               </svg></div>
               <div className='bg-white shadow-xl p-4 mt-4 lg:mt-0 lg:pl-12 rounded-xl lg:rounded-full w-full border-l-2 border-r-2 border-c1'>
                 <ul className='flex flex-col lg:flex-row items-centerlg:gap-10 gap-2'>
-                  <li className='flex justify-center font-bold lg:text-1.2vw '>{blet2} 70대 이상 시니어 패널</li>
-                  <li className='flex justify-center font-bold lg:text-1.2vw '>{blet2} 자녀+부모 쌍 패널</li>
-                  <li className='flex justify-center font-bold lg:text-1.2vw '>{blet2} 국내 거주 외국인 패널</li>
-                  <li className='flex justify-center font-bold lg:text-1.2vw '>{blet2} 다문화 가구 패널</li>
-                  <li className='flex justify-center font-bold lg:text-1.2vw '>...</li>
+                  <li className='flex justify-center font-bold lg:text-1.1vw '>{blet2} 70대 이상 시니어 패널</li>
+                  <li className='flex justify-center font-bold lg:text-1.1vw '>{blet2} 자녀+부모 쌍 패널</li>
+                  <li className='flex justify-center font-bold lg:text-1.1vw '>{blet2} 국내 거주 외국인 패널</li>
+                  <li className='flex justify-center font-bold lg:text-1.1vw '>{blet2} 다문화 가구 패널</li>
+                  <li className='flex justify-center font-bold lg:text-1.1vw '>...</li>
                 </ul>
               </div>
             </div>
@@ -221,7 +221,7 @@ const Pannel = () => {
           <div className='lg:min-h-screen lg:pt-[8%] lg:pb-[8%] flex flex-col items-center justify-center pt-14 pb-14 lg:p-0'>
             <p className='text-4xl text-center lg:text-[3.5vw] lg:pb-14 pb-4 font-extrabold'>한국리서치 MasterSample의 <span className='text-c1'>특장점은?</span></p>
 
-            <div className='lg:w-7/12 lg:min-w-[1200px] grid gap-4 w-10/12 lg:grid-cols-4 lg:gap-8 justify-center items-start'>
+            <div className='lg:w-9/12 lg:min-w-[1200px] grid gap-4 w-10/12 lg:grid-cols-4 lg:gap-8 justify-center items-start'>
  
 
                 {
@@ -249,7 +249,7 @@ const Pannel = () => {
             <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-extrabold pr-4 pl-4'>한국리서치 MasterSample의 <span className='text-c1'>패널 관리 체계</span></p>
             <p className='brnone text-lg text-center leading-tight pl-14 pr-14 text-zinc-500 lg:text-1vw'>안정적인 조사 운영 및 자료 신뢰도를 높이기 위해 Master Sample 등급 제도 등 엄격한 관리 시스템을 운영하고 있습니다.</p>
 
-            <div className='lg:w-7/12 lg:min-w-[1000px] grid gap-2 w-10/12 lg:grid-cols-5 lg:gap-4 justify-center items-start pt-4 lg:pt-14'>
+            <div className='lg:w-9/12 lg:min-w-[1000px] grid gap-2 w-10/12 lg:grid-cols-5 lg:gap-4 justify-center items-start pt-4 lg:pt-14'>
                 
                 {
                   hrcsystem.map((item, i)=>{
@@ -270,7 +270,7 @@ const Pannel = () => {
 
             </div>
 
-            <div className='flex flex-col lg:flex-row lg:justify-between items-center lg:w-7/12 lg:min-w-[1000px] pt-14 w-full'>
+            <div className='flex flex-col lg:flex-row lg:justify-between items-center lg:w-9/12 lg:min-w-[1000px] pt-14 w-full'>
               <div className='flex flex-col justify-center items-center'>
                 <p><img src={`${process.env.PUBLIC_URL}/images/pannel_tag.png`} alt="" /></p>
                 <p className='text-c1 font-bold text-xl'>Master Sample</p>
@@ -280,17 +280,17 @@ const Pannel = () => {
                 <ul className='flex flex-col gap-4 lg:gap-2 font-bold text-sm lg:text-1.1vw mt-4 lg:mt-0 w-full'>
                 <li className='flex items-stretch lg:items-center gap-2'>
                   <div className='flex items-center justify-center w-6 h-6 text-sm bg-c1 text-white font-bold rounded-full'>1</div> 
-                  <div className="lg:min-w-[80px] pr-2">신규 패널</div> 
+                  <div className="lg:min-w-[12%] pr-2">신규 패널</div> 
                   <div className="text-zinc-500">신규 가입 패널</div>
                 </li>
 
                 <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
                   <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>2</div> 
-                  <div className="lg:min-w-[80px]">불성실 패널</div> 
+                  <div className="lg:min-w-[12%]">불성실 패널</div> 
                   <div className="text-zinc-500">1,2,3회 불성실 응답자</div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
                   <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
-                    1,2회 경고 이메일 보냄, 3회 시 Master Sample 해지
+                    1,2회 경고 이메일 보냄,<br className='lg:hidden' />3회 시 Master Sample 해지
                   </div>
                 </li>
 
@@ -298,13 +298,13 @@ const Pannel = () => {
 
                 <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
                   <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>3</div> 
-                  <div className="lg:min-w-[80px] pr-2">활성 패널</div> 
+                  <div className="lg:min-w-[12%] pr-2">활성 패널</div> 
                   <div className="text-zinc-500">현재 진행 중인 응답자</div>
                 </li>
 
                 <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
                   <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>4</div> 
-                  <div className="lg:min-w-[80px] pr-2">휴면 패널</div> 
+                  <div className="lg:min-w-[12%] pr-2">휴면 패널</div> 
                   <div className="text-zinc-500">1년간 접속이 없는 응답자 </div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
                   <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
@@ -314,7 +314,7 @@ const Pannel = () => {
 
                 <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
                   <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>5</div> 
-                  <div className="lg:min-w-[80px] pr-2">불량 패널</div> 
+                  <div className="lg:min-w-[12%] pr-2">불량 패널</div> 
                   <div className="text-zinc-500">비 매너, 누리꾼, 불량 응답자 </div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
                   <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
@@ -324,7 +324,7 @@ const Pannel = () => {
 
                 <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
                   <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>6</div> 
-                  <div className="lg:min-w-[80px] pr-2">탈퇴 희망자</div> 
+                  <div className="lg:min-w-[12%] pr-2">탈퇴 희망자</div> 
                   <div className="text-zinc-500">본인이 탈퇴를 원하는 자</div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
                   <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>
@@ -334,7 +334,7 @@ const Pannel = () => {
 
                 <li className='flex flex-wrap lg:flex-nowrap items-stretch lg:items-center gap-2 w-full'>
                   <div className='flex items-center justify-center w-6 h-6 bg-c1 text-white font-bold rounded-full'>7</div> 
-                  <div className="lg:min-w-[80px] pr-2">과다 참여 패널</div> 
+                  <div className="lg:min-w-[12%] pr-2">과다 참여 패널</div> 
                   <div className="text-zinc-500">연 24회 이상, 월 3회 이상 참여 제한 패널</div>
                   <div className='flex-grow system_blet h-4 hidden lg:block'></div>
                   <div className='w-full lg:w-auto text-sm lg:text-1vw p-1 pl-4 pr-4 mt-0 lg:mt-0 rounded-full text-c1 border border-red-200 leading-tight text-center'>

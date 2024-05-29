@@ -25,29 +25,44 @@ export default function SectionBottom() {
 한국리서치 <span className="text-c1">Quick Survey</span>에 맡기세요</p>
 
 
-                <ul className="p-4 lg:p-14 lg:pt-2 lg:pb-2">
-                    {
-                        checklist.map((i,o)=>{
-                            return(
-                                <li className={`flex justify-center items-center mb-2 bg-neutral-100 rounded-full font-extrabold text-base leading-tight lg:text-1.2vw p-3 pr-14 pl-14`}>
-                                    <i className="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36" fill="none">
-                                <g clip-path="url(#clip0_2018_2138)">
-                                  <path d="M11.52 12.5996L9 15.1196L18 24.1196L36 6.11961L33.48 3.59961L18 19.0796L11.52 12.5996Z" fill="#CD3941"/>
-                                  <path d="M16.2 30.5998C9.18 30.5998 3.6 25.0198 3.6 17.9998C3.6 10.9798 9.18 5.3998 16.2 5.3998C18.36 5.3998 20.52 5.93981 22.5 7.0198L24.3 3.9598C21.78 2.5198 19.08 1.7998 16.2 1.7998C7.2 1.7998 0 8.9998 0 17.9998C0 26.9998 7.2 34.1998 16.2 34.1998C25.2 34.1998 32.4 26.9998 32.4 17.9998H28.8C28.8 25.0198 23.22 30.5998 16.2 30.5998Z" fill="#CD3941"/>
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2018_2138">
-                                    <rect width="36" height="36" fill="white"/>
-                                  </clipPath>
-                                </defs>
-                              </svg></i> {i}</li>
-                            )
-                        })
-                    }
-                   
-                </ul>
-
-                    <ul className="grid grid-cols-4 lg:grid-cols-10 gap-2 w-full pt-4 pb-4">
+<ul className="p-4 lg:p-14 lg:pt-2 lg:pb-2 flex flex-col items-center">
+      {checklist.map((item, index) => (
+        <li
+          key={index}
+          className="mb-2 font-extrabold text-base leading-tight lg:text-[1.2vw]"
+        >
+          <span className="inline-block bg-neutral-100 rounded-full p-3 pr-14 pl-14 flex items-center">
+            <i className="inline-block mr-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 36 36"
+                fill="none"
+              >
+                <g clipPath="url(#clip0_2018_2138)">
+                  <path
+                    d="M11.52 12.5996L9 15.1196L18 24.1196L36 6.11961L33.48 3.59961L18 19.0796L11.52 12.5996Z"
+                    fill="#CD3941"
+                  />
+                  <path
+                    d="M16.2 30.5998C9.18 30.5998 3.6 25.0198 3.6 17.9998C3.6 10.9798 9.18 5.3998 16.2 5.3998C18.36 5.3998 20.52 5.93981 22.5 7.0198L24.3 3.9598C21.78 2.5198 19.08 1.7998 16.2 1.7998C7.2 1.7998 0 8.9998 0 17.9998C0 26.9998 7.2 34.1998 16.2 34.1998C25.2 34.1998 32.4 26.9998 32.4 17.9998H28.8C28.8 25.0198 23.22 30.5998 16.2 30.5998Z"
+                    fill="#CD3941"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2018_2138">
+                    <rect width="36" height="36" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </i>
+            {item}
+          </span>
+        </li>
+      ))}
+    </ul>
+                    <ul className="grid grid-cols-4 lg:grid-cols-12 gap-2 w-full pt-4 pb-4">
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo1.png'} alt="quicksurvey" /></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo2.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo3.png'} alt="quicksurvey"/></li>
@@ -55,6 +70,7 @@ export default function SectionBottom() {
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo5.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo6.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo7.png'} alt="quicksurvey"/></li>
+                        <li><img src={process.env.PUBLIC_URL + '/images/foot_logo8.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo9.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo10.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo11.png'} alt="quicksurvey"/></li>
@@ -71,13 +87,6 @@ export default function SectionBottom() {
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo22.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo23.png'} alt="quicksurvey"/></li>
                         <li><img src={process.env.PUBLIC_URL + '/images/foot_logo24.png'} alt="quicksurvey"/></li>
-                        <li><img src={process.env.PUBLIC_URL + '/images/foot_logo25.png'} alt="quicksurvey"/></li>
-                        <li><img src={process.env.PUBLIC_URL + '/images/foot_logo26.png'} alt="quicksurvey"/></li>
-                        <li><img src={process.env.PUBLIC_URL + '/images/foot_logo27.png'} alt="quicksurvey"/></li>
-                        <li><img src={process.env.PUBLIC_URL + '/images/foot_logo28.png'} alt="quicksurvey"/></li>
-                        <li><img src={process.env.PUBLIC_URL + '/images/foot_logo29.png'} alt="quicksurvey"/></li>
-                        <li className="hidden lg:block"><img src={process.env.PUBLIC_URL + '/images/foot_logo30.png'} alt="quicksurvey"/></li>
-                        <li className="hidden lg:block"><img src={process.env.PUBLIC_URL + '/images/foot_logo31.png'} alt="quicksurvey"/></li>
                     </ul>
     
 

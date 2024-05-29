@@ -99,7 +99,7 @@ export function SectionService02ListMobile(props) {
 </svg></p>
 
         <div className='rounded-xl bg-white shadow-xl w-full'>
-            <div className='rounded-lg bg-c2 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[0].title}</div>
+            <div className='rounded-lg bg-c2 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[2].title}</div>
             <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-12 z-10'>
                 <ul className='text-slate-800'>
                 { researchlist[1].list.map((i)=>{
@@ -118,7 +118,7 @@ export function SectionService02ListMobile(props) {
 </svg></p>
 
         <div className='rounded-xl bg-white shadow-xl w-full'>
-            <div className='rounded-lg bg-c2 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[2].title}</div>
+            <div className='rounded-lg bg-c2 text-center text-white font-bold p-4 pb-14 -z-10'>{researchlist[0].title}</div>
             <div className='rounded-lg bg-gray-50 text-center text-white font-bold p-3 -mt-12 z-10'>
                 <ul className='text-slate-800'>
                 { researchlist[1].list.map((i)=>{
