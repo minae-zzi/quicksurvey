@@ -55,7 +55,7 @@ gsap.registerPlugin(useGSAP);
 
 
 <div className="lg:min-h-screen service-section relative w-full" style={{background: 'rgba(249, 238, 234, 0.40)'}}>
-<Servicedep dep="first" />
+
   
   <div className='flex flex-col-reverse lg:flex-row items-center lg:justify-between sectionbox'>
 
