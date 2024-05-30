@@ -43,12 +43,10 @@ const HomePage = () => {
     console.log(formData)
     console.log(files)
 
-    // 폼 데이터 추가
     formDataToSend.append('username', formData.username);
     formDataToSend.append('password', formData.password);
     formDataToSend.append('company', formData.company);
 
-    // 파일 추가
     files.forEach((file, index) => {
       formDataToSend.append(`file${index + 1}`, file);
     });

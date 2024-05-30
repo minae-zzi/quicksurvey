@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quicksurvey/static/css/main.f4c1bafd.css",
-    "main.js": "/quicksurvey/static/js/main.0553c052.js",
+    "main.css": "/quicksurvey/static/css/main.94e880b5.css",
+    "main.js": "/quicksurvey/static/js/main.72582045.js",
     "static/js/453.b0989f42.chunk.js": "/quicksurvey/static/js/453.b0989f42.chunk.js",
     "static/media/visual.mp4": "/quicksurvey/static/media/visual.616babd6b966aac200cd.mp4",
     "static/media/fail_bg.png": "/quicksurvey/static/media/fail_bg.4c4c931aee95d00af7cd.png",
@@ -29,21 +29,21 @@
     "static/media/Pretendard-ExtraLight.woff2": "/quicksurvey/static/media/Pretendard-ExtraLight.6a3dddfd84c05761ef44.woff2",
     "static/media/Pretendard-Thin.woff2": "/quicksurvey/static/media/Pretendard-Thin.bb7cedf4446fa24dda9d.woff2",
     "static/media/svisual_02.png": "/quicksurvey/static/media/svisual_02.2519e09fc2a11c2b3c9c.png",
-    "static/media/about_img.png": "/quicksurvey/static/media/about_img.c38ef4419b1b5384f3d6.png",
     "static/media/step_bg.png": "/quicksurvey/static/media/step_bg.e8c1c9d8ab6bb10ae3a3.png",
     "static/media/dep4_img.png": "/quicksurvey/static/media/dep4_img.2dc18d58af333417f063.png",
+    "static/media/about_bg.png": "/quicksurvey/static/media/about_bg.3224651a2644d5ff5bc4.png",
     "static/media/step_ico5.svg": "/quicksurvey/static/media/step_ico5.190083da3abb0f0c21f5.svg",
     "static/media/step_ico4.svg": "/quicksurvey/static/media/step_ico4.e7d26dc6b23201fcb084.svg",
     "static/media/step_ico3.svg": "/quicksurvey/static/media/step_ico3.833c68df106af832eb17.svg",
     "static/media/step_ico1.svg": "/quicksurvey/static/media/step_ico1.7c4028b5f55dfd4e57ef.svg",
     "static/media/step_ico2.svg": "/quicksurvey/static/media/step_ico2.ab1dfb7cec62fecd2b36.svg",
     "index.html": "/quicksurvey/index.html",
-    "main.f4c1bafd.css.map": "/quicksurvey/static/css/main.f4c1bafd.css.map",
-    "main.0553c052.js.map": "/quicksurvey/static/js/main.0553c052.js.map",
+    "main.94e880b5.css.map": "/quicksurvey/static/css/main.94e880b5.css.map",
+    "main.72582045.js.map": "/quicksurvey/static/js/main.72582045.js.map",
     "453.b0989f42.chunk.js.map": "/quicksurvey/static/js/453.b0989f42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4c1bafd.css",
-    "static/js/main.0553c052.js"
+    "static/css/main.94e880b5.css",
+    "static/js/main.72582045.js"
   ]
 }

@@ -227,7 +227,7 @@ const Pannel = () => {
                 {
                   merit.map((item, index)=>{
                     return(
-                      <div key={index} className='rounded-xl bg-zinc-50 lg:p-[15%] p-12 pt-10 pb-10 flex flex-col items-center text-center min-h-full'>
+                      <div key={index} className='rounded-xl bg-zinc-50 lg:p-[15%] p-12 pt-10 pb-10 flex flex-col items-center text-center h-full'>
      
       <p>{item.ico}</p>
                         <p className='font-extrabold text-xl lg:text-1.2vw lg:whitespace-pre-line pb-2 pt-2'>{item.title}</p>
@@ -254,7 +254,7 @@ const Pannel = () => {
                 {
                   hrcsystem.map((item, i)=>{
                     return(
-                      <div className='flex flex-col justify-center items-center mt-4 lg:mt-0'>
+                      <div className='flex flex-col justify-center items-center mt-4 lg:mt-0 h-auto'>
                         <p className='rounded-full font-bold text-white p-4 bg-c2 text-lg lg:text-1.1vw leading-tight w-full text-center lg:whitespace-pre-line'>{item.title}</p>
                         <p className='lg:mt-4 mt-2'><svg xmlns="http://www.w3.org/2000/svg" width="12" height="41" viewBox="0 0 12 41" fill="none">
                           <path d="M6 40.3333C8.94552 40.3333 11.3333 37.9455 11.3333 35C11.3333 32.0545 8.94552 29.6667 6 29.6667C3.05448 29.6667 0.666666 32.0545 0.666667 35C0.666667 37.9455 3.05448 40.3333 6 40.3333ZM6 0.226498L0.226496 6L6 11.7735L11.7735 6L6 0.226498ZM7 35L7 6L5 6L5 35L7 35Z" fill="#CD3941"/>

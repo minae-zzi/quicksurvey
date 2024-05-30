@@ -1,36 +1,9 @@
 
-import { useRef } from "react";
-import gsap from 'gsap';
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
-
+import animationData from './aboutimg.json';
+import Lottie from 'lottie-react';
 
 export default function SectionAbout(props) {
 
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(useGSAP);
-
-    const aRef = useRef()
-    const tl = useRef()
-
-
-    useGSAP(()=>{
-      tl.current = gsap.timeline( {
-        scrollTrigger: {
-          trigger: ".sectionAbout", // 범위를 지정하는 요소
-          start: "top center", // 애니메이션이 시작되는 스크롤 위치
-          end: "bottom center",
-          scrub: true
-        }
-      })
-      // .from (".t1",{y:50, opacity:0, duration:1})
-      // .from (".t3",{y:50, opacity:0, duration:1})
-      // .from (".t2",{y:50, opacity:0, duration:1})
-    },{scope: aRef});
-
-   
 
 
     const whysurvey = [
@@ -54,11 +27,34 @@ export default function SectionAbout(props) {
     return (
 
 
-  <div ref={aRef} className="lg:min-h-screen relative w-full flex justify-center items-center p-4">
+  <div className="lg:min-h-screen relative w-full flex justify-center items-center p-4">
   
-      <div className='relative text-center sectionAbout'>
+      <div className='relative text-center w-full'>
 
-        <div className="pb-4 pt-10 lg:pt-6"><img src={process.env.PUBLIC_URL + '/images/about_img.png'} alt="" /></div>
+        <div className='relative text-center about-section justify-center flex'>
+
+          <div className='flex lg:flex-row flex-col justify-center items-center lg:items-start relative w-full lg:w-9/12 lg:pt-6'>
+
+
+              <div className='lg:pr-[5%] w-10/12 lg:w-4/12'><Lottie className='' animationData={animationData} /></div>
+
+              
+            <div className='lg:absolute lg:left-[18%] lg:w-auto w-full left-0 z-10 '>
+              <div className='lg:bg-[#263238] lg:text-white font-extrabold text-base lg:text-1vw lg:p-6 rounded-lg'>필요한 데이터를 빠르고 <br />
+              합리적인 가격에 수집하고 싶다면?</div>
+              <p className='absolute left-[75%] -bottom-[19px] hidden lg:block'><img src={process.env.PUBLIC_URL + '/images/bubble1.png'} alt="" /></p>
+            </div>
+
+            <div className='lg:absolute z-10 right-[22%] -top-[15px]'>
+            <div className='lg:bg-[#CA2C34] lg:text-white font-extrabold pt-6 pb-6 text-base lg:text-1vw lg:p-6 rounded-lg'>지인들에게 조사 해서<br />
+대표성을 확보하기 어렵다면?</div>
+            <p className='absolute left-[20%] -bottom-[17px] hidden lg:block'><img src={process.env.PUBLIC_URL + '/images/bubble2.png'} alt="" /></p>
+            </div>
+
+            </div>
+
+        </div>
+        
         <div className='inline-block t1'>
           <p className='inline-block text-3xl lg:text-3.5vw font-extrabold'>한국리서치에 의뢰하세요</p>
           <p style={{background:'#F8F0E7', height:'15px', width:'100%', margin:'-10px 0 0 0'}}></p>
