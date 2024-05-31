@@ -90,7 +90,7 @@ export default function SectionBottom() {
                     </ul>
     
 
-                    <div className="font-bold text-xl lg:text-1.1vw p-4 pb-2 text-center">수 많은 고객사들이 한국리서치 <span className="text-c1">Quick Survey</span> 함께하고 있습니다</div>
+                    <div className="font-bold text-xl lg:text-1.1vw p-4 pb-2 text-center">이 외에도 수 많은 고객사들이 한국리서치 <span className="text-c1">Quick Survey</span> 함께하고 있습니다</div>
                     <div className="flex lg:flex-row flex-col justify-center gap-2 lg:gap-4 pt-4 items-center">
                         <a href={process.env.PUBLIC_URL + '/file/한국리서치 학술연구조사 Quick Survey 소개서(2024).pdf'} target="_blank"><button className="font-bold text-white text-base lg:text-1.0vw lg:pl-14 lg:pr-14 rounded-full p-4 pr-14 pl-14 bg-c1 leading-tight">한국리서치 Quick Survey<br />
 소개자료 다운로드(PDF)</button></a>

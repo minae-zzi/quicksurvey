@@ -1,11 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import Footer from '../component/footer';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Lenis from 'lenis';
+import { useGSAP } from '@gsap/react';
 
 const Pannel = () => {
+
+  gsap.registerPlugin(ScrollToPlugin)
+  gsap.registerPlugin(useGSAP);
+
+  const container = useRef();
+
+  const { contextSafe } = useGSAP({ scope: container }); 
+
+
+    const handleMenuClick = (target)=>{
+      return (
+        contextSafe(() => {
+          gsap.to(window, { duration: 1, scrollTo: target });
+      
+      })
+      )
+    };
+
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -17,10 +38,14 @@ const Pannel = () => {
 
     gsap.ticker.lagSmoothing(0);
   }, []);
+  
+
+  
+
 
   const blet = (<span className='pr-2 align-middle	'><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
-  <circle cx="1.5" cy="1.5" r="1.5" fill="#CD3941"/>
-</svg></span>)
+                  <circle cx="1.5" cy="1.5" r="1.5" fill="#CD3941"/>
+                </svg></span>)
 
   const blet2 = (<p className=' align-middle flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" className='mr-2'>
   <path d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z" fill="#CD3941"/>
@@ -36,13 +61,13 @@ const Pannel = () => {
       content:'많은 수의 패널을 모집하기 위한 무작위 이메일DB형태의 모집이 아닌, 관리자가 계획한 방법 및 채널을 통해서만 가입이 가능하여 패널 품질이 우수함'},
       { ico:(<img src={`${process.env.PUBLIC_URL}/images/pannel_ico3.png`} alt="" />) , 
       title:'패널의 높은 조사 참여\n적극성 및 충성도', 
-      content:'조사 완료 후 타사는 포인트로 사례비를 지급하는 반면, 당사는100% 현금 사례비 지급으로 패널의 조사 참여 적극성 및 충성도가 높음'},
+      content:'조사 완료 후 타사는 포인트로 사례비를 지급하는 반면, 당사는 100% 현금 사례비 지급으로 패널의 조사 참여 적극성 및 충성도가 높음'},
       { ico:(<img src={`${process.env.PUBLIC_URL}/images/pannel_ico4.png`} alt="" />) , 
       title:'엄격한 패널 관리로\n자료 신뢰도 제고', 
       content:'안정적 조사 운영 및 데이터 품질 유지를 위하여 Master Sample 등급 제도 등을 통해 엄격한 패널 관리'},
       { ico:(<img src={`${process.env.PUBLIC_URL}/images/pannel_ico5.png`} alt="" />) , 
       title:'철저한 응답 품질\n관리 시스템', 
-      content:'불성실 응답을 방지하기 위해 비 적격 Case에 대한 조사 참여 방지 및  탈락 처리를 통해 조사 품질 관리'},
+      content:'불성실 응답을 방지하기 위해 비 적격 Case에 대한 조사 참여 방지 및 탈락 처리를 통해 조사 품질 관리'},
       { ico:(<img src={`${process.env.PUBLIC_URL}/images/pannel_ico6.png`} alt="" />) , 
       title:'개인정보 보유로\n모집단 대표 표본 추출', 
       content:'성별, 학력, 거주지역, 직업 등 개인 정보를 3개월마다 업데이트하여  Master Sample의 최신 개인 정보를 보유하고 있음'},
@@ -63,20 +88,19 @@ const Pannel = () => {
   ]
 
   return (
-    <div className="break-keep">
+    <div className="break-keep" ref={container}>
       <div className='svisual_01 flex justify-center text-white font-bold h-40 text-2xl pt-20 lg:pt-40 lg:h-96 lg:text-6xl '>패널소개</div>
 
       <div className=''>
         <ul className='hidden lg:visible justify-center lg:flex lg:gap-12 lg:text-lg font-bold p-8'>
-          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900'><a href='#section1'>MasterSample이란?</a></li>
-          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900'><a href='#section2'>특수 패널</a></li>
-          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900'><a href='#section3'>특장점</a></li>
-          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900'><a href='#section4'>패널 관리 체계</a></li>
+          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900 cursor-pointer' onClick={handleMenuClick('.section1')}>Master Sample이란?</li>
+          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900 cursor-pointer' onClick={handleMenuClick('.section2')}>특수 패널</li>
+          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900 cursor-pointer' onClick={handleMenuClick('.section3')}>특장점</li>
+          <li className='border-b-2 border-white hover:border-b-2 hover:border-zinc-900 cursor-pointer' onClick={handleMenuClick('.section4')}>패널 관리 체계</li>
         </ul>
 
-        <a name="section1"></a>
-        <div className='pt-14 pb-14 p-4 lg:pt-[5%] lg:pb-[10%] lg:min-h-screen flex flex-col justify-items-center items-center justify-center text-center'>
-          <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-bold'>한국리서치 <span className='text-c1'>MasterSample</span>이란?</p>
+        <div className='pt-14 pb-14 p-4 lg:pt-[5%] lg:pb-[10%] lg:min-h-screen flex flex-col justify-items-center items-center justify-center text-center section1'>
+          <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-bold'>한국리서치 <span className='text-c1'>Master Sample</span>이란?</p>
           <p className='lg:pb[4.5%] text-zinc-500 lg:1vw brnone p-4'>한국리서치는 자발적인 조사 참여 의향을 가진 약 92만명의 자체 Master Sample® 을 보유하고 있습니다. <br />
 통계적 대표성을 확보한 Master Sample® 을 활용하여 다양한 주제의 조사에서 적격응답자를 신속하게 확보할 수 있으며, 조사 결과의 정확성을 높일 수 있습니다.</p>
 
@@ -91,7 +115,7 @@ const Pannel = () => {
                 <li className='relative flex items-center'>{blet} 15-19세 <span className='absolute right-0 text-zinc-600'>66,890명 <span className='text-c1 lg:pr-4'>7.3%</span></span></li>
                 <li className='relative flex items-center'>{blet} 20-29세 <span className='absolute right-0 text-zinc-600'>282,430명 <span className='text-c1'>30.7%</span></span></li>
                 <li className='relative flex items-center'>{blet} 30-39세 <span className='absolute right-0 text-zinc-600'>157,967명 <span className='text-c1 lg:pr-4'>17.2%</span></span></li>
-                <li className='relative flex items-center'>{blet} 40-49세 <span className='absolute right-0 text-zinc-600'>165,119명명 <span className='text-c1'>17.9%</span></span></li>
+                <li className='relative flex items-center'>{blet} 40-49세 <span className='absolute right-0 text-zinc-600'>165,119명 <span className='text-c1'>17.9%</span></span></li>
                 <li className='relative flex items-center'>{blet} 50-59세 <span className='absolute right-0 text-zinc-600'>158,605명 <span className='text-c1 lg:pr-4'>17.2%</span></span></li>
                 <li className='relative flex items-center'>{blet} 60세 이상 <span className='absolute right-0 text-zinc-600'>89,696명 <span className='text-c1'>9.7%</span></span></li>
               </ul>
@@ -108,7 +132,7 @@ const Pannel = () => {
         
           {/* 특수패널 */}
           <a name="section2"></a>
-          <div className='pt-10 pb-10 p-4 lg:pt-[8%] lg:pb-[8%] lg:min-h-screen flex flex-col text-center justify-center items-center bg-zinc-50'>
+          <div className='pt-10 pb-10 p-4 lg:pt-[8%] lg:pb-[8%] lg:min-h-screen flex flex-col text-center justify-center items-center bg-zinc-50 section2'>
           <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-extrabold'>한국리서치 <span className='text-c1'>특수 패널</span></p>
           <p className='brnone pb-6 lg:pb-[2.5%] text-zinc-500'>이 외에도 한국리서치는 특수 패널을 구축하여 보다 빠르고 정확하게 적격응답자를 찾을 수 있습니다</p>
 
@@ -217,9 +241,8 @@ const Pannel = () => {
 
 
           {/* 특장점 */}
-          <a name="section3"></a>
-          <div className='lg:min-h-screen lg:pt-[8%] lg:pb-[8%] flex flex-col items-center justify-center pt-14 pb-14 lg:p-0'>
-            <p className='text-4xl text-center lg:text-[3.5vw] lg:pb-14 pb-4 font-extrabold'>한국리서치 MasterSample의 <span className='text-c1'>특장점은?</span></p>
+          <div className='lg:min-h-screen lg:pt-[8%] lg:pb-[8%] flex flex-col items-center justify-center pt-14 pb-14 lg:p-0 section3'>
+            <p className='text-4xl text-center lg:text-[3.5vw] lg:pb-14 pb-4 font-extrabold'>한국리서치 Master Sample의 <span className='text-c1'>특장점은?</span></p>
 
             <div className='lg:w-9/12 lg:min-w-[1200px] grid gap-4 w-10/12 lg:grid-cols-4 lg:gap-8 justify-center items-start'>
  
@@ -244,9 +267,8 @@ const Pannel = () => {
 
 
           {/* 패널관리체계 */}
-          <a name="section4"></a>
-          <div className='lg:min-h-screen lg:pt-[8%] lg:pb-[8%] flex flex-col items-center justify-center pt-14 pb-14 lg:p-0' style={{backgroundColor:'rgba(249, 238, 234, 0.40)'}}>
-            <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-extrabold pr-4 pl-4'>한국리서치 MasterSample의 <span className='text-c1'>패널 관리 체계</span></p>
+          <div className='lg:min-h-screen lg:pt-[8%] lg:pb-[8%] flex flex-col items-center justify-center pt-14 pb-14 lg:p-0 section4' style={{backgroundColor:'rgba(249, 238, 234, 0.40)'}}>
+            <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-extrabold pr-4 pl-4'>한국리서치 Master Sample의 <span className='text-c1'>패널 관리 체계</span></p>
             <p className='brnone text-lg text-center leading-tight pl-14 pr-14 text-zinc-500 lg:text-1vw'>안정적인 조사 운영 및 자료 신뢰도를 높이기 위해 Master Sample 등급 제도 등 엄격한 관리 시스템을 운영하고 있습니다.</p>
 
             <div className='lg:w-9/12 lg:min-w-[1000px] grid gap-2 w-10/12 lg:grid-cols-5 lg:gap-4 justify-center items-start pt-4 lg:pt-14'>

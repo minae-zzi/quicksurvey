@@ -10,7 +10,7 @@ export default function SectionService03(props) {
 
   const datasort = [
     '설문에 끝까지 참여하지 않은 데이터',
-    '일괄되게 동일한 응답을 한 데이터',
+    '모두 동일한 응답을 한 데이터',
     '누락값이 있는 데이터',
     '응답 시간이 지나치게 짧은 데이터',
     '비논리적인 데이터',
@@ -34,8 +34,8 @@ export default function SectionService03(props) {
           {
             datasort.map((i)=>{
               return(
-                <li className='relative rounded-full bg-c3 text-white font-bold lg:text-1.2vw text-center p-2 lg:p-3 lg:pl-10 align-middle shadow-lg'>
-                  <p className='absolute -left-2 top-2 lg:left-2 lg:top-1.5 rounded-full bg-white p-2 lg:p-2 inline-block'>
+                <li className='relative flex items-center justify-center rounded-full bg-c3 text-white font-bold lg:text-1.2vw text-center p-2 lg:p-3 lg:pl-10 align-middle shadow-lg'>
+                  <p className='absolute -left-2 lg:left-2 top-1/2 transform -translate-y-1/2 rounded-full bg-white p-2 lg:p-2 flex items-start'>
                     <img src={process.env.PUBLIC_URL + '/images/ico_x.png'} alt="x" className="lg:w-4 lg:h-4 w-2 h-2" /></p>{i}
                 </li>
            
