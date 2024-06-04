@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import Footer from '../component/footer';
 import gsap from 'gsap';
@@ -131,7 +131,6 @@ const Pannel = () => {
 
         
           {/* 특수패널 */}
-          <a name="section2"></a>
           <div className='pt-10 pb-10 p-4 lg:pt-[8%] lg:pb-[8%] lg:min-h-screen flex flex-col text-center justify-center items-center bg-zinc-50 section2'>
           <p className='text-4xl text-center lg:text-3.5vw lg:pb-[1%] pb-4 font-extrabold'>한국리서치 <span className='text-c1'>특수 패널</span></p>
           <p className='brnone pb-6 lg:pb-[2.5%] text-zinc-500'>이 외에도 한국리서치는 특수 패널을 구축하여 보다 빠르고 정확하게 적격응답자를 찾을 수 있습니다</p>
@@ -165,8 +164,8 @@ const Pannel = () => {
                     <p className='font-extrabold text-3xl lg:text-1.5vw text-slate-900 p-2 pb-4'>1,250명</p>
                     <p className='rounded-full bg-c4 p-2 mb-2'>병원급별</p>
                     <ul className='text-slate-800 lg:text-1vw'>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>종합병원급 <span className='absolute right-0 text-zinc-400 font-normal'>721명 (57.7%)</span></li>
-                        <li className='border-b border-zinc-200 p-2 relative text-left'>병원급 <span className='absolute right-0 text-zinc-400 font-normal'>529명 (42.3%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>종합병원급 이상 <span className='absolute right-0 text-zinc-400 font-normal'>721명 (57.7%)</span></li>
+                        <li className='border-b border-zinc-200 p-2 relative text-left'>병원급 이하 <span className='absolute right-0 text-zinc-400 font-normal'>529명 (42.3%)</span></li>
                     </ul>
                     <p className='rounded-full bg-c4 p-2 mb-2 mt-4'>병동별</p>
                     <ul className='text-slate-800 lg:text-1vw'>

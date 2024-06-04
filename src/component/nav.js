@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -62,6 +62,8 @@ function NavigatorMobile() {
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
 
+  const navigate = useNavigate();
+
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(useGSAP);
 
@@ -97,7 +99,9 @@ function NavigatorMobile() {
     <header className='fixed bg-white z-20 h-auto w-full'>
         <div className='flex items-center justify-between p-2 z-10'>
           <h1><Link to='/'><img src={process.env.PUBLIC_URL + '/images/logo_b.png'} alt="quicksurvey" className='h-8' /></Link></h1>
-          <p className='pr-4' onClick={togglemenue}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <p className='flex items-center pr-2' onClick={togglemenue}>
+          <button className='bg-c1 text-white font-extrabold rounded-full p-4 pt-2 pb-2 text-sm mr-2' onClick={() => navigate('/inqury')}>조사문의</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect width="24" height="24" rx="12" fill="white"/>
             <rect x="6" y="6" width="12" height="2" rx="1" fill="#222222"/>
             <rect x="6" y="11" width="12" height="2" rx="1" fill="#222222"/>
