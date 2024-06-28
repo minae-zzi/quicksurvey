@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import axios from 'axios';
 import Footer from '../component/footer';
 
 const HomePage = () => {
+  const history = useNavigate();
   const inputClass = 'rounded-md bg-zinc-100 p-3 w-full';
   const [fileInputs, setFileInputs] = useState([1]);
   const [files, setFiles] = useState([]);
@@ -54,14 +56,14 @@ const validationSchema = Yup.object().shape({
   company: Yup.string()
     .max(maxLength, `글자 수는 ${maxLength}자를 초과할 수 없습니다.`)
     .matches(/^(?![\s\S]*<.*>).{0,200}$/, securityMessage),
-  position: Yup.string()
+  q_position: Yup.string()
     .max(maxLength, `글자 수는 ${maxLength}자를 초과할 수 없습니다.`)
     .matches(/^(?![\s\S]*<.*>).{0,200}$/, securityMessage),
-  name: Yup.string()
+  q_name: Yup.string()
     .max(maxLength, `글자 수는 ${maxLength}자를 초과할 수 없습니다.`)
     .matches(/^(?![\s\S]*<.*>).{0,200}$/, securityMessage)
     .required('필수항목입니다.'),
-  call: Yup.string()
+  call_num: Yup.string()
     .max(maxLength, `글자 수는 ${maxLength}자를 초과할 수 없습니다.`)
     .matches(/^(?![\s\S]*<.*>).{0,200}$/, securityMessage)
     .required('필수항목입니다.'),
@@ -118,9 +120,9 @@ const validationSchema = Yup.object().shape({
           <Formik
             initialValues={{ 
               company: '',
-              position: '',
-              name: '',
-              call: '',
+              q_position: '',
+              q_name: '',
+              call_num: '',
               email: '',
               target: '',
               sample: '',
@@ -132,9 +134,9 @@ const validationSchema = Yup.object().shape({
               const formDataToSend = new FormData();
             
               formDataToSend.append('company', values.company);
-              formDataToSend.append('position', values.position);
-              formDataToSend.append('name', values.name);
-              formDataToSend.append('call', values.call);
+              formDataToSend.append('q_position', values.q_position);
+              formDataToSend.append('q_name', values.q_name);
+              formDataToSend.append('call_num', values.call_num);
               formDataToSend.append('email', values.email);
               formDataToSend.append('target', values.target);
               formDataToSend.append('sample', values.sample);
@@ -146,9 +148,9 @@ const validationSchema = Yup.object().shape({
             
               console.log('Form Data to Send:', {
                 company: values.company,
-                position: values.position,
-                name: values.name,
-                call: values.call,
+                q_position: values.q_position,
+                q_name: values.q_name,
+                call_num: values.call_num,
                 email: values.email,
                 target: values.target,
                 sample: values.sample,
@@ -158,20 +160,23 @@ const validationSchema = Yup.object().shape({
             
               console.log('Submitting to backend...');
               // axios.post로 서버에 데이터를 전송하는 코드는 주석처리되어 있습니다. 이 부분을 활성화하고 실제 서버 URL로 수정해야 합니다.
-              // axios.post('http://example.com/api/resource', formDataToSend, {
-              //   headers: {
-              //     'Content-Type': 'multipart/form-data',
-              //   },
-              // })
-              //   .then((response) => {
-              //     console.log('응답:', response.data);
-              //   })
-              //   .catch((error) => {
-              //     console.error('오류:', error);
-              //   })
-              //   .finally(() => {
-              //     setSubmitting(false);
-              //   });
+              axios.post('https://61.78.75.166:8443/api/data', formDataToSend, {
+                withCredentials: true,
+                headers: {
+                  'Content-Type': 'multipart/form-data',
+                },
+              })
+                .then((response) => {
+                  console.log('응답:', response.data);
+                  history('/complete');
+                })
+                .catch((error) => {
+                  console.error('오류:', error);
+                })
+                .finally(() => {
+                  setSubmitting(false);
+                  console.log('폼 제출 완료');
+                });
             
               // 서버 통신 대신 setTimeout을 사용하여 가상의 응답을 받습니다.
               setTimeout(() => {
@@ -181,7 +186,7 @@ const validationSchema = Yup.object().shape({
             }}
           >
             {({ isSubmitting }) => (
-              <Form>
+              <Form method="post">
                 <div className='rounded-xl border border-c-zinc-200 p-8 lg:p-10 text-left'>
                   <ul className='grid grid-cols-2 gap-8 font-bold'>
                     <li className='lg:col-span-1 col-span-2'>
@@ -191,18 +196,18 @@ const validationSchema = Yup.object().shape({
                     </li>
                     <li className='lg:col-span-1 col-span-2'>
                       <p className='pb-2'>직책(교수, 박사, 석사 등)</p> 
-                      <Field type="text" name="position" className={inputClass} />
-                      <ErrorMessage name="position" component="div" className="text-red-500" />
+                      <Field type="text" name="q_position" className={inputClass} />
+                      <ErrorMessage name="q_position" component="div" className="text-red-500" />
                     </li>
                     <li className='lg:col-span-1 col-span-2'>
                       <p className='pb-2'><span className='text-c1 pr-2'>*</span>성명</p> 
-                      <Field type="text" name="name" className={inputClass} />
-                      <ErrorMessage name="name" component="div" className="text-red-500" />
+                      <Field type="text" name="q_name" className={inputClass} />
+                      <ErrorMessage name="q_name" component="div" className="text-red-500" />
                     </li>
                     <li className='lg:col-span-1 col-span-2'>
                       <p className='pb-2'><span className='text-c1 pr-2'>*</span>연락처</p> 
-                      <Field type="text" name="call" className={inputClass} />
-                      <ErrorMessage name="call" component="div" className="text-red-500" />
+                      <Field type="text" name="call_num" className={inputClass} />
+                      <ErrorMessage name="call_num" component="div" className="text-red-500" />
                     </li>
                     <li className='col-span-2'>
                       <p className='pb-2'>이메일</p>

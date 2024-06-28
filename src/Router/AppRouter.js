@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {Navigator, NavigatorMobile} from '../component/nav'
 import HomePage from '../pages/Home';
 import PannelPage from '../pages/Pannel';
-import Inqury from '../pages/Inqury'
+import Inqury from '../pages/Inqury';
+import Complete from '../pages/Complete';
 import ScrollToTop from '../component/ScrollToTop';
 
 const AppRouter = () => {
@@ -22,7 +23,7 @@ const AppRouter = () => {
   }, []);
 
   return (
-    <Router basename="/quicksurvey">
+    <Router basename="/">
       
       {isMobile ? <NavigatorMobile /> : <Navigator />}
       <ScrollToTop />
@@ -30,10 +31,11 @@ const AppRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/pannel" element={<PannelPage />} />
         <Route path="/inqury" element={<Inqury />} />
-        
+        <Route path="/complete" element={<Complete />} />
       </Routes>
     </Router>
   );
 };
 
 export default AppRouter;
+

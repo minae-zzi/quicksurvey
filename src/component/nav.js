@@ -51,7 +51,6 @@ function Navigator() {
               <li><Link to={i.link}>{i.title}</Link></li>
             )
           })}
-          <li>조사문의</li>
         </ul>
       </div>
     </header>
