@@ -23,7 +23,7 @@ const AppRouter = () => {
   }, []);
 
   return (
-    <Router basename="/">
+    <Router basename="/quicksurvey">
       
       {isMobile ? <NavigatorMobile /> : <Navigator />}
       <ScrollToTop />
